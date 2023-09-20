@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B227E2F32ABAF548005B3554 /* ElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B227E2F22ABAF548005B3554 /* ElementView.swift */; };
+		B227E2F52ABB48B9005B3554 /* Meridian.swift in Sources */ = {isa = PBXBuildFile; fileRef = B227E2F42ABB48B9005B3554 /* Meridian.swift */; };
+		B227E2F72ABB4901005B3554 /* Acupoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B227E2F62ABB4901005B3554 /* Acupoint.swift */; };
 		B2E66B3F2ABAEA8000E94711 /* BubbleChartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E66B3E2ABAEA8000E94711 /* BubbleChartApp.swift */; };
 		B2E66B412ABAEA8000E94711 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E66B402ABAEA8000E94711 /* ContentView.swift */; };
 		B2E66B432ABAEA8100E94711 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E66B422ABAEA8100E94711 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		B227E2F22ABAF548005B3554 /* ElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementView.swift; sourceTree = "<group>"; };
+		B227E2F42ABB48B9005B3554 /* Meridian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meridian.swift; sourceTree = "<group>"; };
+		B227E2F62ABB4901005B3554 /* Acupoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acupoint.swift; sourceTree = "<group>"; };
 		B2E66B3B2ABAEA8000E94711 /* BubbleChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubbleChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E66B3E2ABAEA8000E94711 /* BubbleChartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChartApp.swift; sourceTree = "<group>"; };
 		B2E66B402ABAEA8000E94711 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 			children = (
 				B2E66B3E2ABAEA8000E94711 /* BubbleChartApp.swift */,
 				B2E66B402ABAEA8000E94711 /* ContentView.swift */,
+				B227E2F62ABB4901005B3554 /* Acupoint.swift */,
+				B227E2F42ABB48B9005B3554 /* Meridian.swift */,
 				B227E2F22ABAF548005B3554 /* ElementView.swift */,
 				B2E66B422ABAEA8100E94711 /* Assets.xcassets */,
 				B2E66B682ABAEB4800E94711 /* acupoints.json */,
@@ -264,8 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B227E2F72ABB4901005B3554 /* Acupoint.swift in Sources */,
 				B2E66B412ABAEA8000E94711 /* ContentView.swift in Sources */,
 				B227E2F32ABAF548005B3554 /* ElementView.swift in Sources */,
+				B227E2F52ABB48B9005B3554 /* Meridian.swift in Sources */,
 				B2E66B3F2ABAEA8000E94711 /* BubbleChartApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
