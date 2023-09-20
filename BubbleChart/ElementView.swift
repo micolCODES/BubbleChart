@@ -88,6 +88,8 @@ struct ElementView: View {
                 HStack{}
             }
             .padding()
+            //needs to be VARIABLE with element chosen
+            .navigationTitle("Element View")
         }
     }
 }

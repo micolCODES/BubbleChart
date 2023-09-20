@@ -87,6 +87,7 @@ struct ContentView: View {
                 HStack{}
             }
             .padding()
+            .navigationTitle("5 Elements")
         }
     }
 }
