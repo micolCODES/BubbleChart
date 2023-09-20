@@ -38,9 +38,7 @@ struct ContentView: View {
                                 .background(Color.green.gradient)
                                 .clipShape(Circle())
                         }
-                        NavigationLink {
-                            ElementView()
-                        } label: {
+                        HStack {
                             Text("???")
                                 .frame(width: 120, height: 120)
                                 .font(.title.bold())
