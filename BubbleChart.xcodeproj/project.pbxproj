@@ -14,6 +14,7 @@
 		B2E66B502ABAEA8100E94711 /* BubbleChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E66B4F2ABAEA8100E94711 /* BubbleChartTests.swift */; };
 		B2E66B5A2ABAEA8100E94711 /* BubbleChartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E66B592ABAEA8100E94711 /* BubbleChartUITests.swift */; };
 		B2E66B5C2ABAEA8100E94711 /* BubbleChartUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E66B5B2ABAEA8100E94711 /* BubbleChartUITestsLaunchTests.swift */; };
+		B2E66B692ABAEB4800E94711 /* acupoints.json in Resources */ = {isa = PBXBuildFile; fileRef = B2E66B682ABAEB4800E94711 /* acupoints.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		B2E66B552ABAEA8100E94711 /* BubbleChartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubbleChartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E66B592ABAEA8100E94711 /* BubbleChartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChartUITests.swift; sourceTree = "<group>"; };
 		B2E66B5B2ABAEA8100E94711 /* BubbleChartUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChartUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B2E66B682ABAEB4800E94711 /* acupoints.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = acupoints.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				B2E66B3E2ABAEA8000E94711 /* BubbleChartApp.swift */,
 				B2E66B402ABAEA8000E94711 /* ContentView.swift */,
 				B2E66B422ABAEA8100E94711 /* Assets.xcassets */,
+				B2E66B682ABAEB4800E94711 /* acupoints.json */,
 				B2E66B442ABAEA8100E94711 /* Preview Content */,
 			);
 			path = BubbleChart;
@@ -233,6 +236,7 @@
 			files = (
 				B2E66B462ABAEA8100E94711 /* Preview Assets.xcassets in Resources */,
 				B2E66B432ABAEA8100E94711 /* Assets.xcassets in Resources */,
+				B2E66B692ABAEB4800E94711 /* acupoints.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
