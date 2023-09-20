@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let meridians = Bundle.main.decode("meridiansNacupoints.json")
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -39,7 +42,7 @@ struct ContentView: View {
                                 .clipShape(Circle())
                         }
                         HStack {
-                            Text("???")
+                            Text("\(meridians.count)")
                                 .frame(width: 120, height: 120)
                                 .font(.title.bold())
                                 .foregroundColor(Color.black)
