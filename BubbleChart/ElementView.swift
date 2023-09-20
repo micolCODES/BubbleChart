@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ElementView.swift
 //  BubbleChart
 //
 //  Created by Micol on 20.09.23.
@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ElementView: View {
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -16,11 +17,11 @@ struct ContentView: View {
                     HStack{
                         Spacer()
                         NavigationLink {
-                            ElementView()
+                        
                         } label: {
-                            Text("Fire")
-                                .frame(width: 130, height: 130)
-                                .font(.title.bold())
+                            Text("Fire  POINT")
+                                .frame(width: 110, height: 110)
+                                .font(.title2.bold())
                                 .foregroundColor(Color.white)
                                 .background(Color.red.gradient)
                                 .clipShape(Circle())
@@ -29,22 +30,31 @@ struct ContentView: View {
                     }
                     HStack{
                         NavigationLink {
-                            ElementView()
+                            
                         } label: {
-                            Text("Wood")
-                                .frame(width: 130, height: 130)
-                                .font(.title.bold())
+                            Text("Wood POINT")
+                                .frame(width: 110, height: 110)
+                                .font(.title2.bold())
                                 .foregroundColor(Color.black)
                                 .background(Color.green.gradient)
                                 .clipShape(Circle())
                         }
-                        Spacer()
                         NavigationLink {
-                            ElementView()
+                            
                         } label: {
-                            Text("Earth")
-                                .frame(width: 130, height: 130)
-                                .font(.title.bold())
+                            Text("MASTER POINT")
+                                .frame(width: 110, height: 110)
+                                .font(.title2.bold())
+                                .foregroundColor(Color.black)
+                                .background(Color.white.gradient)
+                                .clipShape(Circle())
+                        }
+                        NavigationLink {
+                            
+                        } label: {
+                            Text("Earth POINT")
+                                .frame(width: 110, height: 110)
+                                .font(.title2.bold())
                                 .foregroundColor(Color.black)
                                 .background(Color.orange.gradient)
                                 .clipShape(Circle())
@@ -53,21 +63,21 @@ struct ContentView: View {
                     HStack{
                         Spacer()
                         NavigationLink {
-                            ElementView()
+                            
                         } label: {
-                            Text("Water")
-                                .frame(width: 130, height: 130)
-                                .font(.title.bold())
+                            Text("Water POINT")
+                                .frame(width: 110, height: 110)
+                                .font(.title2.bold())
                                 .foregroundColor(Color.white)
                                 .background(Color.black.gradient)
                                 .clipShape(Circle())
                         }
                         NavigationLink {
-                            ElementView()
+                            
                         } label: {
-                            Text("Metal")
-                                .frame(width: 130, height: 130)
-                                .font(.title.bold())
+                            Text("Metal POINT")
+                                .frame(width: 110, height: 110)
+                                .font(.title2.bold())
                                 .foregroundColor(Color.black)
                                 .background(Color(UIColor.lightGray).gradient)
                                 .clipShape(Circle())
@@ -83,5 +93,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ElementView()
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B227E2F32ABAF548005B3554 /* ElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B227E2F22ABAF548005B3554 /* ElementView.swift */; };
 		B2E66B3F2ABAEA8000E94711 /* BubbleChartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E66B3E2ABAEA8000E94711 /* BubbleChartApp.swift */; };
 		B2E66B412ABAEA8000E94711 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E66B402ABAEA8000E94711 /* ContentView.swift */; };
 		B2E66B432ABAEA8100E94711 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E66B422ABAEA8100E94711 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B227E2F22ABAF548005B3554 /* ElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementView.swift; sourceTree = "<group>"; };
 		B2E66B3B2ABAEA8000E94711 /* BubbleChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubbleChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E66B3E2ABAEA8000E94711 /* BubbleChartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChartApp.swift; sourceTree = "<group>"; };
 		B2E66B402ABAEA8000E94711 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				B2E66B3E2ABAEA8000E94711 /* BubbleChartApp.swift */,
 				B2E66B402ABAEA8000E94711 /* ContentView.swift */,
+				B227E2F22ABAF548005B3554 /* ElementView.swift */,
 				B2E66B422ABAEA8100E94711 /* Assets.xcassets */,
 				B2E66B682ABAEB4800E94711 /* acupoints.json */,
 				B2E66B442ABAEA8100E94711 /* Preview Content */,
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2E66B412ABAEA8000E94711 /* ContentView.swift in Sources */,
+				B227E2F32ABAF548005B3554 /* ElementView.swift in Sources */,
 				B2E66B3F2ABAEA8000E94711 /* BubbleChartApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
