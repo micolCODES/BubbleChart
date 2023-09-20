@@ -19,7 +19,7 @@ struct ContentView: View {
                             ElementView()
                         } label: {
                             Text("Fire")
-                                .frame(width: 130, height: 130)
+                                .frame(width: 120, height: 120)
                                 .font(.title.bold())
                                 .foregroundColor(Color.white)
                                 .background(Color.red.gradient)
@@ -32,18 +32,27 @@ struct ContentView: View {
                             ElementView()
                         } label: {
                             Text("Wood")
-                                .frame(width: 130, height: 130)
+                                .frame(width: 120, height: 120)
                                 .font(.title.bold())
                                 .foregroundColor(Color.black)
                                 .background(Color.green.gradient)
                                 .clipShape(Circle())
                         }
-                        Spacer()
+                        NavigationLink {
+                            ElementView()
+                        } label: {
+                            Text("???")
+                                .frame(width: 120, height: 120)
+                                .font(.title.bold())
+                                .foregroundColor(Color.black)
+                                .background(Color.white.gradient)
+                                .clipShape(Circle())
+                        }
                         NavigationLink {
                             ElementView()
                         } label: {
                             Text("Earth")
-                                .frame(width: 130, height: 130)
+                                .frame(width: 120, height: 120)
                                 .font(.title.bold())
                                 .foregroundColor(Color.black)
                                 .background(Color.orange.gradient)
@@ -56,7 +65,7 @@ struct ContentView: View {
                             ElementView()
                         } label: {
                             Text("Water")
-                                .frame(width: 130, height: 130)
+                                .frame(width: 120, height: 120)
                                 .font(.title.bold())
                                 .foregroundColor(Color.white)
                                 .background(Color.black.gradient)
@@ -66,7 +75,7 @@ struct ContentView: View {
                             ElementView()
                         } label: {
                             Text("Metal")
-                                .frame(width: 130, height: 130)
+                                .frame(width: 120, height: 120)
                                 .font(.title.bold())
                                 .foregroundColor(Color.black)
                                 .background(Color(UIColor.lightGray).gradient)
