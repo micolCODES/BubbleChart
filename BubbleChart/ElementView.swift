@@ -13,78 +13,157 @@ struct ElementView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
+            ZStack {
+                Circle()
+                //color will depend on element chosen
+                    .fill(RadialGradient(gradient: Gradient(colors: [.red.opacity(0.1), .red.opacity(0.7), .black.opacity(0.3)]), center: .center, startRadius: 0, endRadius: 300))
                 HStack{}
-                VStack{
-                    HStack{
-                        Spacer()
-                        NavigationLink {
-                        
-                        } label: {
-                            Text("Fire  POINT")
-                                .frame(width: 110, height: 110)
-                                .font(.title2.bold())
-                                .foregroundColor(Color.white)
-                                .background(Color.red.gradient)
-                                .clipShape(Circle())
+                HStack {
+                    //LEADING point system
+                    VStack{
+                        HStack{
+                            Spacer()
+                            NavigationLink {
+                                
+                            } label: {
+                                Text("XXX")
+                                    .frame(width: 50, height: 50)
+                                    .font(.title2.bold())
+                                    .foregroundColor(Color.white)
+                                    .background(Color.red.gradient)
+                                    .clipShape(Circle())
+                            }
+                            Spacer()
                         }
-                        Spacer()
+                        HStack{
+                            NavigationLink {
+                                
+                            } label: {
+                                Text("XXX")
+                                    .frame(width: 50, height: 50)
+                                    .font(.title2.bold())
+                                    .foregroundColor(Color.black)
+                                    .background(Color.green.gradient)
+                                    .clipShape(Circle())
+                            }
+                            NavigationLink {
+                                
+                            } label: {
+                                Text("XXX")
+                                    .frame(width: 50, height: 50)
+                                    .font(.title2.bold())
+                                    .foregroundColor(Color.black)
+                                    .background(Color.white.gradient)
+                                    .clipShape(Circle())
+                            }
+                            NavigationLink {
+                                
+                            } label: {
+                                Text("XXX")
+                                    .frame(width: 50, height: 50)
+                                    .font(.title2.bold())
+                                    .foregroundColor(Color.black)
+                                    .background(Color.orange.gradient)
+                                    .clipShape(Circle())
+                            }
+                        }
+                        HStack{
+                            Spacer()
+                            NavigationLink {
+                                
+                            } label: {
+                                Text("XXX")
+                                    .frame(width: 50, height: 50)
+                                    .font(.title2.bold())
+                                    .foregroundColor(Color.white)
+                                    .background(Color.black.gradient)
+                                    .clipShape(Circle())
+                            }
+                            NavigationLink {
+                                
+                            } label: {
+                                Text("XXX")
+                                    .frame(width: 50, height: 50)
+                                    .font(.title2.bold())
+                                    .foregroundColor(Color.black)
+                                    .background(Color(UIColor.lightGray).gradient)
+                                    .clipShape(Circle())
+                            }
+                            Spacer()
+                        }
                     }
-                    HStack{
-                        NavigationLink {
-                            
-                        } label: {
-                            Text("Wood POINT")
-                                .frame(width: 110, height: 110)
-                                .font(.title2.bold())
-                                .foregroundColor(Color.black)
-                                .background(Color.green.gradient)
-                                .clipShape(Circle())
+                    //TRAILING point system
+                    VStack{
+                        HStack{
+                            Spacer()
+                            NavigationLink {
+                                
+                            } label: {
+                                Text("XXX")
+                                    .frame(width: 50, height: 50)
+                                    .font(.title2.bold())
+                                    .foregroundColor(Color.white)
+                                    .background(Color.red.gradient)
+                                    .clipShape(Circle())
+                            }
+                            Spacer()
                         }
-                        NavigationLink {
-                            
-                        } label: {
-                            Text("MASTER POINT")
-                                .frame(width: 110, height: 110)
-                                .font(.title2.bold())
-                                .foregroundColor(Color.black)
-                                .background(Color.white.gradient)
-                                .clipShape(Circle())
+                        HStack{
+                            NavigationLink {
+                                
+                            } label: {
+                                Text("XXX")
+                                    .frame(width: 50, height: 50)
+                                    .font(.title2.bold())
+                                    .foregroundColor(Color.black)
+                                    .background(Color.green.gradient)
+                                    .clipShape(Circle())
+                            }
+                            NavigationLink {
+                                
+                            } label: {
+                                Text("XXX")
+                                    .frame(width: 50, height: 50)
+                                    .font(.title2.bold())
+                                    .foregroundColor(Color.black)
+                                    .background(Color.white.gradient)
+                                    .clipShape(Circle())
+                            }
+                            NavigationLink {
+                                
+                            } label: {
+                                Text("XXX")
+                                    .frame(width: 50, height: 50)
+                                    .font(.title2.bold())
+                                    .foregroundColor(Color.black)
+                                    .background(Color.orange.gradient)
+                                    .clipShape(Circle())
+                            }
                         }
-                        NavigationLink {
-                            
-                        } label: {
-                            Text("Earth POINT")
-                                .frame(width: 110, height: 110)
-                                .font(.title2.bold())
-                                .foregroundColor(Color.black)
-                                .background(Color.orange.gradient)
-                                .clipShape(Circle())
+                        HStack{
+                            Spacer()
+                            NavigationLink {
+                                
+                            } label: {
+                                Text("XXX")
+                                    .frame(width: 50, height: 50)
+                                    .font(.title2.bold())
+                                    .foregroundColor(Color.white)
+                                    .background(Color.black.gradient)
+                                    .clipShape(Circle())
+                            }
+                            NavigationLink {
+                                
+                            } label: {
+                                Text("XXX")
+                                    .frame(width: 50, height: 50)
+                                    .font(.title2.bold())
+                                    .foregroundColor(Color.black)
+                                    .background(Color(UIColor.lightGray).gradient)
+                                    .clipShape(Circle())
+                            }
+                            Spacer()
                         }
-                    }
-                    HStack{
-                        Spacer()
-                        NavigationLink {
-                            
-                        } label: {
-                            Text("Water POINT")
-                                .frame(width: 110, height: 110)
-                                .font(.title2.bold())
-                                .foregroundColor(Color.white)
-                                .background(Color.black.gradient)
-                                .clipShape(Circle())
-                        }
-                        NavigationLink {
-                            
-                        } label: {
-                            Text("Metal POINT")
-                                .frame(width: 110, height: 110)
-                                .font(.title2.bold())
-                                .foregroundColor(Color.black)
-                                .background(Color(UIColor.lightGray).gradient)
-                                .clipShape(Circle())
-                        }
-                        Spacer()
                     }
                 }
                 HStack{}
