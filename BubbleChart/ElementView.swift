@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ElementView: View {
     
+    let element: String
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -89,11 +91,11 @@ struct ElementView: View {
             }
             .padding()
             //needs to be VARIABLE with element chosen
-            .navigationTitle("Element View")
+            .navigationTitle(element)
         }
     }
 }
 
 #Preview {
-    ElementView()
+    ElementView(element: "fire")
 }

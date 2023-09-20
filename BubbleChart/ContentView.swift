@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let meridians = Bundle.main.decode("meridiansNacupoints.json")
+    let meridians: [String: Meridian] = Bundle.main.decode("meridiansNacupoints.json")
     
     var body: some View {
         NavigationView {
@@ -19,7 +19,7 @@ struct ContentView: View {
                     HStack{
                         Spacer()
                         NavigationLink {
-                            ElementView()
+                            ElementView(element: "Fire")
                         } label: {
                             Text("Fire")
                                 .frame(width: 120, height: 120)
@@ -32,7 +32,7 @@ struct ContentView: View {
                     }
                     HStack{
                         NavigationLink {
-                            ElementView()
+                            ElementView(element: "Wood")
                         } label: {
                             Text("Wood")
                                 .frame(width: 120, height: 120)
@@ -50,7 +50,7 @@ struct ContentView: View {
                                 .clipShape(Circle())
                         }
                         NavigationLink {
-                            ElementView()
+                            ElementView(element: "Earth")
                         } label: {
                             Text("Earth")
                                 .frame(width: 120, height: 120)
@@ -63,7 +63,7 @@ struct ContentView: View {
                     HStack{
                         Spacer()
                         NavigationLink {
-                            ElementView()
+                            ElementView(element: "Water")
                         } label: {
                             Text("Water")
                                 .frame(width: 120, height: 120)
@@ -73,7 +73,7 @@ struct ContentView: View {
                                 .clipShape(Circle())
                         }
                         NavigationLink {
-                            ElementView()
+                            ElementView(element: "Metal")
                         } label: {
                             Text("Metal")
                                 .frame(width: 120, height: 120)
