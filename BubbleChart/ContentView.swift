@@ -42,9 +42,9 @@ struct ContentView: View {
                                 .clipShape(Circle())
                         }
                         HStack {
-                            Text("\(meridians.count)")
+                            Text("\(meridians.count == 12 ? "JSON ✅" : "Cannot read JSON")")
                                 .frame(width: 120, height: 120)
-                                .font(.title.bold())
+                                .font(.headline.bold())
                                 .foregroundColor(Color.black)
                                 .background(Color.white.gradient)
                                 .clipShape(Circle())
