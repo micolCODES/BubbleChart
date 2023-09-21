@@ -10,7 +10,7 @@ import Foundation
 struct Acupoint: Codable, Identifiable {
     let id: String
     let name: String
-    let level: Int
+    let level: Int?
     let element: String
     let description: String
 }

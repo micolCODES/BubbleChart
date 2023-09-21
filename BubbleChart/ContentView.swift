@@ -19,7 +19,7 @@ struct ContentView: View {
                     HStack{
                         Spacer()
                         NavigationLink {
-                            ElementView(element: "Fire")
+                            ElementView(element: "fire")
                         } label: {
                             Text("Fire")
                                 .frame(width: 120, height: 120)
@@ -32,7 +32,7 @@ struct ContentView: View {
                     }
                     HStack{
                         NavigationLink {
-                            ElementView(element: "Wood")
+                            ElementView(element: "wood")
                         } label: {
                             Text("Wood")
                                 .frame(width: 120, height: 120)
@@ -50,7 +50,7 @@ struct ContentView: View {
                                 .clipShape(Circle())
                         }
                         NavigationLink {
-                            ElementView(element: "Earth")
+                            ElementView(element: "earth")
                         } label: {
                             Text("Earth")
                                 .frame(width: 120, height: 120)
@@ -63,7 +63,7 @@ struct ContentView: View {
                     HStack{
                         Spacer()
                         NavigationLink {
-                            ElementView(element: "Water")
+                            ElementView(element: "water")
                         } label: {
                             Text("Water")
                                 .frame(width: 120, height: 120)
@@ -73,7 +73,7 @@ struct ContentView: View {
                                 .clipShape(Circle())
                         }
                         NavigationLink {
-                            ElementView(element: "Metal")
+                            ElementView(element: "metal")
                         } label: {
                             Text("Metal")
                                 .frame(width: 120, height: 120)
@@ -91,6 +91,7 @@ struct ContentView: View {
             .navigationTitle("5 Elements")
         }
     }
+    
 }
 
 #Preview {
