@@ -24,7 +24,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 HStack{}
-                FiveElementWheel(yin: true)
+                FiveElementWheel(wood: "Wood", fire: "Fire", earth: "Earth", metal: "Metal", water: "Water", yin: true, circleSize: 120)
                 HStack{}
             }
             .padding()

@@ -9,7 +9,14 @@ import Foundation
 import SwiftUI
 
 struct FiveElementWheel: View {
+    var wood: String
+    var fire: String
+    var earth: String
+    var metal: String
+    var water: String
     var yin: Bool
+    var circleSize: CGFloat
+    
     
     let meridians: [String: Meridian] = Bundle.main.decode("meridiansNacupoints.json")
     
@@ -20,11 +27,11 @@ struct FiveElementWheel: View {
                 NavigationLink {
                     ElementView(element: "fire")
                 } label: {
-                    Text("Fire")
-                        .frame(width: 120, height: 120)
+                    Text(fire)
+                        .frame(width: circleSize, height: circleSize)
                         .font(.title.bold())
                         .foregroundColor(Color.white)
-                        .background(RadialGradient(gradient: Gradient(colors: [ElementColor.fire.opacity(0.6), ElementColor.fire, .black]), center: .center, startRadius: 0, endRadius: 120))
+                        .background(RadialGradient(gradient: Gradient(colors: [ElementColor.fire.opacity(0.6), ElementColor.fire, .black]), center: .center, startRadius: 0, endRadius: circleSize))
                         .clipShape(Circle())
                 }
                 Spacer()
@@ -33,8 +40,8 @@ struct FiveElementWheel: View {
                 NavigationLink {
                     ElementView(element: "wood")
                 } label: {
-                    Text("Wood")
-                        .frame(width: 120, height: 120)
+                    Text(wood)
+                        .frame(width: circleSize, height: circleSize)
                         .font(.title.bold())
                         .foregroundColor(Color.black)
                         .background(RadialGradient(gradient: Gradient(colors: [ElementColor.wood.opacity(0.4), ElementColor.wood, .black]), center: .center, startRadius: 0, endRadius: 120))
@@ -42,7 +49,7 @@ struct FiveElementWheel: View {
                 }
                 HStack {
                     Text("\(meridians.count == 12 ? "JSON ✅" : "Cannot read JSON")")
-                        .frame(width: 120, height: 120)
+                        .frame(width: circleSize, height: circleSize)
                         .font(.headline.bold())
                         .foregroundColor(Color.black)
                         .background(Color.white.gradient)
@@ -51,11 +58,11 @@ struct FiveElementWheel: View {
                 NavigationLink {
                     ElementView(element: "earth")
                 } label: {
-                    Text("Earth")
-                        .frame(width: 120, height: 120)
+                    Text(earth)
+                        .frame(width: circleSize, height: circleSize)
                         .font(.title.bold())
                         .foregroundColor(Color.black)
-                        .background(RadialGradient(gradient: Gradient(colors: [ElementColor.earth.opacity(0.4), ElementColor.earth, .black]), center: .center, startRadius: 0, endRadius: 120))
+                        .background(RadialGradient(gradient: Gradient(colors: [ElementColor.earth.opacity(0.4), ElementColor.earth, .black]), center: .center, startRadius: 0, endRadius: circleSize))
                         .clipShape(Circle())
                 }
             }
@@ -64,21 +71,21 @@ struct FiveElementWheel: View {
                 NavigationLink {
                     ElementView(element: "water")
                 } label: {
-                    Text("Water")
-                        .frame(width: 120, height: 120)
+                    Text(water)
+                        .frame(width: circleSize, height: circleSize)
                         .font(.title.bold())
                         .foregroundColor(Color.white)
-                        .background(RadialGradient(gradient: Gradient(colors: [ElementColor.water.opacity(0.5), ElementColor.water, .black]), center: .center, startRadius: 0, endRadius: 120))
+                        .background(RadialGradient(gradient: Gradient(colors: [ElementColor.water.opacity(0.5), ElementColor.water, .black]), center: .center, startRadius: 0, endRadius: circleSize))
                         .clipShape(Circle())
                 }
                 NavigationLink {
                     ElementView(element: "metal")
                 } label: {
-                    Text("Metal")
-                        .frame(width: 120, height: 120)
+                    Text(metal)
+                        .frame(width: circleSize, height: circleSize)
                         .font(.title.bold())
                         .foregroundColor(Color.black)
-                        .background(RadialGradient(gradient: Gradient(colors: [ ElementColor.metal.opacity(0.1),ElementColor.metal, .black]), center: .center, startRadius: 0, endRadius: 120))
+                        .background(RadialGradient(gradient: Gradient(colors: [ ElementColor.metal.opacity(0.1),ElementColor.metal, .black]), center: .center, startRadius: 0, endRadius: circleSize))
                         .clipShape(Circle())
                 }
                 Spacer()
