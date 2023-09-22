@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B21661C42ABD78BF00A4A13E /* FiveElementWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21661C32ABD78BF00A4A13E /* FiveElementWheel.swift */; };
 		B227E2F32ABAF548005B3554 /* ElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B227E2F22ABAF548005B3554 /* ElementView.swift */; };
 		B227E2F52ABB48B9005B3554 /* Meridian.swift in Sources */ = {isa = PBXBuildFile; fileRef = B227E2F42ABB48B9005B3554 /* Meridian.swift */; };
 		B227E2F72ABB4901005B3554 /* Acupoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B227E2F62ABB4901005B3554 /* Acupoint.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B21661C32ABD78BF00A4A13E /* FiveElementWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveElementWheel.swift; sourceTree = "<group>"; };
 		B227E2F22ABAF548005B3554 /* ElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementView.swift; sourceTree = "<group>"; };
 		B227E2F42ABB48B9005B3554 /* Meridian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meridian.swift; sourceTree = "<group>"; };
 		B227E2F62ABB4901005B3554 /* Acupoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acupoint.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				B2E66B3E2ABAEA8000E94711 /* BubbleChartApp.swift */,
 				B2E66B402ABAEA8000E94711 /* ContentView.swift */,
+				B21661C32ABD78BF00A4A13E /* FiveElementWheel.swift */,
 				B227E2F62ABB4901005B3554 /* Acupoint.swift */,
 				B227E2F42ABB48B9005B3554 /* Meridian.swift */,
 				B227E2F82ABB49E3005B3554 /* Bundle-Decodable.swift */,
@@ -275,6 +278,7 @@
 			files = (
 				B227E2F72ABB4901005B3554 /* Acupoint.swift in Sources */,
 				B2E66B412ABAEA8000E94711 /* ContentView.swift in Sources */,
+				B21661C42ABD78BF00A4A13E /* FiveElementWheel.swift in Sources */,
 				B227E2F32ABAF548005B3554 /* ElementView.swift in Sources */,
 				B227E2F52ABB48B9005B3554 /* Meridian.swift in Sources */,
 				B2E66B3F2ABAEA8000E94711 /* BubbleChartApp.swift in Sources */,
