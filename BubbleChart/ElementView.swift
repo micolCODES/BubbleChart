@@ -19,7 +19,7 @@ struct ElementView: View {
             ZStack {
                 Circle()
                 //color will depend on element chosen
-                    .fill(RadialGradient(gradient: Gradient(colors: [elementPicker(element).opacity(0.1), elementPicker(element).opacity(0.7), .black.opacity(0.3)]), center: .center, startRadius: 0, endRadius: 300))
+                    .fill(RadialGradient(gradient: Gradient(colors: [elementColorPicker(element).opacity(0.1), elementColorPicker(element).opacity(0.7), .black.opacity(0.3)]), center: .center, startRadius: 0, endRadius: 300))
                 HStack {
                     //LEADING point system
                     VStack{
@@ -176,15 +176,19 @@ struct ElementView: View {
         }
     }
     
-    func elementPicker (_ element: String) -> Color{
+    func elementColorPicker (_ element: String) -> Color{
         switch element {
-        case "wood": return Color.green
-            case "fire": return Color.red
-            case "earth": return Color.orange
-            case "metal": return Color(UIColor.lightGray)
-            case "water": return Color.black
+        case "wood": return ElementColor.wood
+        case "fire": return ElementColor.fire
+        case "earth": return ElementColor.earth
+        case "metal": return ElementColor.metal
+        case "water": return ElementColor.water
             default: return Color.white
         }
+    }
+    
+    func elementAcupointsPicker(_ element: String) {
+        
     }
 }
 

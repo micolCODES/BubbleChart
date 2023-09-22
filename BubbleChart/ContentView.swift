@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+struct ElementColor{
+    static let wood = Color("wood")
+    static let fire = Color("fire")
+    static let earth = Color("earth")
+    static let metal = Color("metal")
+    static let water = Color("water")
+    
+}
+
 struct ContentView: View {
     
     let meridians: [String: Meridian] = Bundle.main.decode("meridiansNacupoints.json")
@@ -25,7 +34,7 @@ struct ContentView: View {
                                 .frame(width: 120, height: 120)
                                 .font(.title.bold())
                                 .foregroundColor(Color.white)
-                                .background(RadialGradient(gradient: Gradient(colors: [.red.opacity(0.4), .red.opacity(0.9), .black]), center: .center, startRadius: 0, endRadius: 120))
+                                .background(RadialGradient(gradient: Gradient(colors: [ElementColor.fire.opacity(0.6), ElementColor.fire, .black]), center: .center, startRadius: 0, endRadius: 120))
                                 .clipShape(Circle())
                         }
                         Spacer()
@@ -38,7 +47,7 @@ struct ContentView: View {
                                 .frame(width: 120, height: 120)
                                 .font(.title.bold())
                                 .foregroundColor(Color.black)
-                                .background(RadialGradient(gradient: Gradient(colors: [.green.opacity(0.4), .green.opacity(0.9), .black]), center: .center, startRadius: 0, endRadius: 120))
+                                .background(RadialGradient(gradient: Gradient(colors: [ElementColor.wood.opacity(0.4), ElementColor.wood, .black]), center: .center, startRadius: 0, endRadius: 120))
                                 .clipShape(Circle())
                         }
                         HStack {
@@ -56,7 +65,7 @@ struct ContentView: View {
                                 .frame(width: 120, height: 120)
                                 .font(.title.bold())
                                 .foregroundColor(Color.black)
-                                .background(RadialGradient(gradient: Gradient(colors: [.orange.opacity(0.4), .orange.opacity(0.9), .black]), center: .center, startRadius: 0, endRadius: 120))
+                                .background(RadialGradient(gradient: Gradient(colors: [ElementColor.earth.opacity(0.4), ElementColor.earth, .black]), center: .center, startRadius: 0, endRadius: 120))
                                 .clipShape(Circle())
                         }
                     }
@@ -69,7 +78,7 @@ struct ContentView: View {
                                 .frame(width: 120, height: 120)
                                 .font(.title.bold())
                                 .foregroundColor(Color.white)
-                                .background(RadialGradient(gradient: Gradient(colors: [.black.opacity(0.5), .black.opacity(1)]), center: .center, startRadius: 0, endRadius: 120))
+                                .background(RadialGradient(gradient: Gradient(colors: [ElementColor.water.opacity(0.5), ElementColor.water, .black]), center: .center, startRadius: 0, endRadius: 120))
                                 .clipShape(Circle())
                         }
                         NavigationLink {
@@ -79,7 +88,7 @@ struct ContentView: View {
                                 .frame(width: 120, height: 120)
                                 .font(.title.bold())
                                 .foregroundColor(Color.black)
-                                .background(RadialGradient(gradient: Gradient(colors: [.white, .gray.opacity(0.3), .black]), center: .center, startRadius: 0, endRadius: 120))
+                                .background(RadialGradient(gradient: Gradient(colors: [ ElementColor.metal.opacity(0.1),ElementColor.metal, .black]), center: .center, startRadius: 0, endRadius: 120))
                                 .clipShape(Circle())
                         }
                         Spacer()
