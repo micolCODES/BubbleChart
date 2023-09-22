@@ -36,7 +36,7 @@ struct FiveElementWheel: View {
                     Text(fire.capitalized)
                         .frame(width: circleSize, height: circleSize)
                         .foregroundColor(Color.white)
-                        .background(RadialGradient(gradient: Gradient(colors: [ElementColor.fire.opacity(0.6), ElementColor.fire, .black]), center: .center, startRadius: 0, endRadius: circleSize))
+                        .background(RadialGradient(gradient: Gradient(colors: [ElementColor.lightfire, ElementColor.fire]), center: .center, startRadius: 0, endRadius: circleSize))
                         .clipShape(Circle())
                 }
                 Spacer()
@@ -52,7 +52,7 @@ struct FiveElementWheel: View {
                     Text(wood.capitalized)
                         .frame(width: circleSize, height: circleSize)
                         .foregroundColor(Color.black)
-                        .background(RadialGradient(gradient: Gradient(colors: [ElementColor.wood.opacity(0.4), ElementColor.wood, .black]), center: .center, startRadius: 0, endRadius: 120))
+                        .background(RadialGradient(gradient: Gradient(colors: [ElementColor.lightwood, ElementColor.wood]), center: .center, startRadius: 0, endRadius: 120))
                         .clipShape(Circle())
                 }
                 HStack {
@@ -72,7 +72,7 @@ struct FiveElementWheel: View {
                     Text(earth.capitalized)
                         .frame(width: circleSize, height: circleSize)
                         .foregroundColor(Color.black)
-                        .background(RadialGradient(gradient: Gradient(colors: [ElementColor.earth.opacity(0.4), ElementColor.earth, .black]), center: .center, startRadius: 0, endRadius: circleSize))
+                        .background(RadialGradient(gradient: Gradient(colors: [ElementColor.lightearth, ElementColor.earth]), center: .center, startRadius: 0, endRadius: circleSize))
                         .clipShape(Circle())
                 }
             }
@@ -88,7 +88,7 @@ struct FiveElementWheel: View {
                     Text(water.capitalized)
                         .frame(width: circleSize, height: circleSize)
                         .foregroundColor(Color.white)
-                        .background(RadialGradient(gradient: Gradient(colors: [ElementColor.water.opacity(0.5), ElementColor.water, .black]), center: .center, startRadius: 0, endRadius: circleSize))
+                        .background(RadialGradient(gradient: Gradient(colors: [ElementColor.lightwater, ElementColor.water]), center: .center, startRadius: 0, endRadius: circleSize))
                         .clipShape(Circle())
                 }
                 NavigationLink {
@@ -101,7 +101,7 @@ struct FiveElementWheel: View {
                     Text(metal.capitalized)
                         .frame(width: circleSize, height: circleSize)
                         .foregroundColor(Color.black)
-                        .background(RadialGradient(gradient: Gradient(colors: [ ElementColor.metal.opacity(0.1),ElementColor.metal, .black]), center: .center, startRadius: 0, endRadius: circleSize))
+                        .background(RadialGradient(gradient: Gradient(colors: [ ElementColor.lightmetal, ElementColor.metal]), center: .center, startRadius: 0, endRadius: circleSize))
                         .clipShape(Circle())
                 }
                 Spacer()

@@ -20,7 +20,7 @@ struct ElementView: View {
             ZStack {
                 Circle()
                 //color will depend on element chosen
-                    .fill(RadialGradient(gradient: Gradient(colors: [elementColorPicker(element).opacity(0.1), elementColorPicker(element).opacity(0.7), .black.opacity(0.3)]), center: .center, startRadius: 0, endRadius: 300))
+                    .fill(RadialGradient(gradient: Gradient(colors: [elementColorPicker(element).opacity(0.1), elementColorPicker(element), .black.opacity(0.3)]), center: .center, startRadius: 0, endRadius: 300))
                 HStack {
                     //LEADING point system
                     FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: true, circleSize: circleSize, typeOfView: "ElementView")
