@@ -18,18 +18,48 @@ struct ElementView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Circle()
-                //color will depend on element chosen
-                    .fill(RadialGradient(gradient: Gradient(colors: [elementColorPicker(element).opacity(0.1), elementColorPicker(element), .black.opacity(0.3)]), center: .center, startRadius: 0, endRadius: 300))
-                HStack {
-                    //LEADING point system
-                    FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: true, circleSize: circleSize, typeOfView: "ElementView")
-                        .font(.title2.bold())
-                    //TRAILING point system
-                    FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: false, circleSize: circleSize, typeOfView: "ElementView")
-                        .font(.title2.bold())
+                if element != "fire" {
+                    Circle()
+                    //color will depend on element chosen
+                        .fill(RadialGradient(gradient: Gradient(colors: [elementColorPicker(element).opacity(0.1), elementColorPicker(element), .black.opacity(0.3)]), center: .center, startRadius: 0, endRadius: 300))
+                    VStack {
+                        Spacer()
+                        HStack {
+                            //LEADING point system
+                            FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: true, circleSize: circleSize, typeOfView: "ElementView")
+                                .font(.title2.bold())
+                            //TRAILING point system
+                            FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: false, circleSize: circleSize, typeOfView: "ElementView")
+                                .font(.title2.bold())
+                        }
+                        .frame(maxWidth: .infinity)
+                        Spacer()
+                    }
+                } else {
+                    Rectangle()
+                    //color will depend on element chosen
+                        .fill(RadialGradient(gradient: Gradient(colors: [elementColorPicker(element).opacity(0.1), elementColorPicker(element), .black.opacity(0.3)]), center: .center, startRadius: 0, endRadius: 400))
+                        .cornerRadius(40)
+                    VStack {
+                        HStack {
+                            //LEADING point system, SI
+                            FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: false, circleSize: circleSize, typeOfView: "ElementView")
+                                .font(.title2.bold())
+                            //TRAILING point system, TH
+                            FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: false, circleSize: circleSize, typeOfView: "ElementView")
+                                .font(.title2.bold())
+                        }
+                        HStack {
+                            //LEADING point system, HT
+                            FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: true, circleSize: circleSize, typeOfView: "ElementView")
+                                .font(.title2.bold())
+                            //TRAILING point system, PC
+                            FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: true, circleSize: circleSize, typeOfView: "ElementView")
+                                .font(.title2.bold())
+                        }
+                        .frame(maxWidth: .infinity)
+                    }
                 }
-                .frame(maxWidth: .infinity)
             }
             .padding()
             //needs to be VARIABLE with element chosen
@@ -54,5 +84,5 @@ struct ElementView: View {
 }
 
 #Preview {
-    ElementView(element: "fire")
+    ElementView(element: "water")
 }

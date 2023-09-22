@@ -30,7 +30,7 @@ struct FiveElementWheel: View {
                     if typeOfView == "ContentView" {
                         ElementView(element: fire)
                     } else {
-                        //AcupointView
+                        AcupointView(acupoint: "XXX")
                     }
                 } label: {
                     Text(fire.capitalized)
@@ -46,7 +46,7 @@ struct FiveElementWheel: View {
                     if typeOfView == "ContentView" {
                         ElementView(element: wood)
                     } else {
-                        //AcupointView
+                        AcupointView(acupoint: "XXX")
                     }
                 } label: {
                     Text(wood.capitalized)
@@ -66,7 +66,7 @@ struct FiveElementWheel: View {
                     if typeOfView == "ContentView" {
                         ElementView(element: earth)
                     } else {
-                        //AcupointView
+                        AcupointView(acupoint: "XXX")
                     }
                 } label: {
                     Text(earth.capitalized)
@@ -82,7 +82,7 @@ struct FiveElementWheel: View {
                     if typeOfView == "ContentView" {
                         ElementView(element: water)
                     } else {
-                        //AcupointView
+                        AcupointView(acupoint: "XXX")
                     }
                 } label: {
                     Text(water.capitalized)
@@ -95,7 +95,7 @@ struct FiveElementWheel: View {
                     if typeOfView == "ContentView" {
                         ElementView(element: metal)
                     } else {
-                        //AcupointView
+                        AcupointView(acupoint: "XXX")
                     }
                 } label: {
                     Text(metal.capitalized)
