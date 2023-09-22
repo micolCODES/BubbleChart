@@ -20,6 +20,7 @@
 		B2E66B5A2ABAEA8100E94711 /* BubbleChartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E66B592ABAEA8100E94711 /* BubbleChartUITests.swift */; };
 		B2E66B5C2ABAEA8100E94711 /* BubbleChartUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E66B5B2ABAEA8100E94711 /* BubbleChartUITestsLaunchTests.swift */; };
 		B2E66B692ABAEB4800E94711 /* meridiansNacupoints.json in Resources */ = {isa = PBXBuildFile; fileRef = B2E66B682ABAEB4800E94711 /* meridiansNacupoints.json */; };
+		B2FF53FB2ABDCB9600CA0512 /* AcupointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FF53FA2ABDCB9600CA0512 /* AcupointView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		B2E66B592ABAEA8100E94711 /* BubbleChartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChartUITests.swift; sourceTree = "<group>"; };
 		B2E66B5B2ABAEA8100E94711 /* BubbleChartUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChartUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B2E66B682ABAEB4800E94711 /* meridiansNacupoints.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = meridiansNacupoints.json; sourceTree = "<group>"; };
+		B2FF53FA2ABDCB9600CA0512 /* AcupointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcupointView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				B2E66B3E2ABAEA8000E94711 /* BubbleChartApp.swift */,
 				B2E66B402ABAEA8000E94711 /* ContentView.swift */,
+				B2FF53FA2ABDCB9600CA0512 /* AcupointView.swift */,
 				B21661C32ABD78BF00A4A13E /* FiveElementWheel.swift */,
 				B227E2F62ABB4901005B3554 /* Acupoint.swift */,
 				B227E2F42ABB48B9005B3554 /* Meridian.swift */,
@@ -279,6 +282,7 @@
 				B227E2F72ABB4901005B3554 /* Acupoint.swift in Sources */,
 				B2E66B412ABAEA8000E94711 /* ContentView.swift in Sources */,
 				B21661C42ABD78BF00A4A13E /* FiveElementWheel.swift in Sources */,
+				B2FF53FB2ABDCB9600CA0512 /* AcupointView.swift in Sources */,
 				B227E2F32ABAF548005B3554 /* ElementView.swift in Sources */,
 				B227E2F52ABB48B9005B3554 /* Meridian.swift in Sources */,
 				B2E66B3F2ABAEA8000E94711 /* BubbleChartApp.swift in Sources */,
