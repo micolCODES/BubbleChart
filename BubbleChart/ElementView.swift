@@ -10,8 +10,9 @@ import SwiftUI
 struct ElementView: View {
     
     @State private var elementBgColor: Color = Color.gray
+    @State private var circleSize = CGFloat(50)
     
-    let element: String
+    var element: String
     
     
     var body: some View {
@@ -22,157 +23,17 @@ struct ElementView: View {
                     .fill(RadialGradient(gradient: Gradient(colors: [elementColorPicker(element).opacity(0.1), elementColorPicker(element).opacity(0.7), .black.opacity(0.3)]), center: .center, startRadius: 0, endRadius: 300))
                 HStack {
                     //LEADING point system
-                    VStack{
-                        HStack{
-                            Spacer()
-                            NavigationLink {
-                                
-                            } label: {
-                                Text("XXX")
-                                    .frame(width: 50, height: 50)
-                                    .font(.title2.bold())
-                                    .foregroundColor(Color.white)
-                                    .background(Color.red.gradient)
-                                    .clipShape(Circle())
-                            }
-                            Spacer()
-                        }
-                        HStack{
-                            NavigationLink {
-                                
-                            } label: {
-                                Text("XXX")
-                                    .frame(width: 50, height: 50)
-                                    .font(.title2.bold())
-                                    .foregroundColor(Color.black)
-                                    .background(Color.green.gradient)
-                                    .clipShape(Circle())
-                            }
-                            NavigationLink {
-                                
-                            } label: {
-                                Text("XXX")
-                                    .frame(width: 50, height: 50)
-                                    .font(.title2.bold())
-                                    .foregroundColor(Color.black)
-                                    .background(Color.white.gradient)
-                                    .clipShape(Circle())
-                            }
-                            NavigationLink {
-                                
-                            } label: {
-                                Text("XXX")
-                                    .frame(width: 50, height: 50)
-                                    .font(.title2.bold())
-                                    .foregroundColor(Color.black)
-                                    .background(Color.orange.gradient)
-                                    .clipShape(Circle())
-                            }
-                        }
-                        HStack{
-                            Spacer()
-                            NavigationLink {
-                                
-                            } label: {
-                                Text("XXX")
-                                    .frame(width: 50, height: 50)
-                                    .font(.title2.bold())
-                                    .foregroundColor(Color.white)
-                                    .background(Color.black.gradient)
-                                    .clipShape(Circle())
-                            }
-                            NavigationLink {
-                                
-                            } label: {
-                                Text("XXX")
-                                    .frame(width: 50, height: 50)
-                                    .font(.title2.bold())
-                                    .foregroundColor(Color.black)
-                                    .background(Color(UIColor.lightGray).gradient)
-                                    .clipShape(Circle())
-                            }
-                            Spacer()
-                        }
-                    }
+                    FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: true, circleSize: circleSize, typeOfView: "ElementView")
+                        .font(.title2.bold())
                     //TRAILING point system
-                    VStack{
-                        HStack{
-                            Spacer()
-                            NavigationLink {
-                                
-                            } label: {
-                                Text("XXX")
-                                    .frame(width: 50, height: 50)
-                                    .font(.title2.bold())
-                                    .foregroundColor(Color.white)
-                                    .background(Color.red.gradient)
-                                    .clipShape(Circle())
-                            }
-                            Spacer()
-                        }
-                        HStack{
-                            NavigationLink {
-                                
-                            } label: {
-                                Text("XXX")
-                                    .frame(width: 50, height: 50)
-                                    .font(.title2.bold())
-                                    .foregroundColor(Color.black)
-                                    .background(Color.green.gradient)
-                                    .clipShape(Circle())
-                            }
-                            NavigationLink {
-                                
-                            } label: {
-                                Text("XXX")
-                                    .frame(width: 50, height: 50)
-                                    .font(.title2.bold())
-                                    .foregroundColor(Color.black)
-                                    .background(Color.white.gradient)
-                                    .clipShape(Circle())
-                            }
-                            NavigationLink {
-                                
-                            } label: {
-                                Text("XXX")
-                                    .frame(width: 50, height: 50)
-                                    .font(.title2.bold())
-                                    .foregroundColor(Color.black)
-                                    .background(Color.orange.gradient)
-                                    .clipShape(Circle())
-                            }
-                        }
-                        HStack{
-                            Spacer()
-                            NavigationLink {
-                                
-                            } label: {
-                                Text("XXX")
-                                    .frame(width: 50, height: 50)
-                                    .font(.title2.bold())
-                                    .foregroundColor(Color.white)
-                                    .background(Color.black.gradient)
-                                    .clipShape(Circle())
-                            }
-                            NavigationLink {
-                                
-                            } label: {
-                                Text("XXX")
-                                    .frame(width: 50, height: 50)
-                                    .font(.title2.bold())
-                                    .foregroundColor(Color.black)
-                                    .background(Color(UIColor.lightGray).gradient)
-                                    .clipShape(Circle())
-                            }
-                            Spacer()
-                        }
-                    }
+                    FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: false, circleSize: circleSize, typeOfView: "ElementView")
+                        .font(.title2.bold())
                 }
                 .frame(maxWidth: .infinity)
             }
             .padding()
             //needs to be VARIABLE with element chosen
-            .navigationTitle(element)
+            .navigationTitle(element.capitalized)
         }
     }
     
@@ -183,7 +44,7 @@ struct ElementView: View {
         case "earth": return ElementColor.earth
         case "metal": return ElementColor.metal
         case "water": return ElementColor.water
-            default: return Color.white
+        default: return Color.white
         }
     }
     

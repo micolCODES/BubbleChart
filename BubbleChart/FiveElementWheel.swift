@@ -14,8 +14,10 @@ struct FiveElementWheel: View {
     var earth: String
     var metal: String
     var water: String
+    var master: String
     var yin: Bool
     var circleSize: CGFloat
+    var typeOfView: String
     
     
     let meridians: [String: Meridian] = Bundle.main.decode("meridiansNacupoints.json")
@@ -25,11 +27,14 @@ struct FiveElementWheel: View {
             HStack{
                 Spacer()
                 NavigationLink {
-                    ElementView(element: "fire")
+                    if typeOfView == "ContentView" {
+                        ElementView(element: fire)
+                    } else {
+                        //AcupointView
+                    }
                 } label: {
-                    Text(fire)
+                    Text(fire.capitalized)
                         .frame(width: circleSize, height: circleSize)
-                        .font(.title.bold())
                         .foregroundColor(Color.white)
                         .background(RadialGradient(gradient: Gradient(colors: [ElementColor.fire.opacity(0.6), ElementColor.fire, .black]), center: .center, startRadius: 0, endRadius: circleSize))
                         .clipShape(Circle())
@@ -38,29 +43,34 @@ struct FiveElementWheel: View {
             }
             HStack{
                 NavigationLink {
-                    ElementView(element: "wood")
+                    if typeOfView == "ContentView" {
+                        ElementView(element: wood)
+                    } else {
+                        //AcupointView
+                    }
                 } label: {
-                    Text(wood)
+                    Text(wood.capitalized)
                         .frame(width: circleSize, height: circleSize)
-                        .font(.title.bold())
                         .foregroundColor(Color.black)
                         .background(RadialGradient(gradient: Gradient(colors: [ElementColor.wood.opacity(0.4), ElementColor.wood, .black]), center: .center, startRadius: 0, endRadius: 120))
                         .clipShape(Circle())
                 }
                 HStack {
-                    Text("\(meridians.count == 12 ? "JSON ✅" : "Cannot read JSON")")
+                    Text(master.capitalized)
                         .frame(width: circleSize, height: circleSize)
-                        .font(.headline.bold())
                         .foregroundColor(Color.black)
                         .background(Color.white.gradient)
                         .clipShape(Circle())
                 }
                 NavigationLink {
-                    ElementView(element: "earth")
+                    if typeOfView == "ContentView" {
+                        ElementView(element: earth)
+                    } else {
+                        //AcupointView
+                    }
                 } label: {
-                    Text(earth)
+                    Text(earth.capitalized)
                         .frame(width: circleSize, height: circleSize)
-                        .font(.title.bold())
                         .foregroundColor(Color.black)
                         .background(RadialGradient(gradient: Gradient(colors: [ElementColor.earth.opacity(0.4), ElementColor.earth, .black]), center: .center, startRadius: 0, endRadius: circleSize))
                         .clipShape(Circle())
@@ -69,21 +79,27 @@ struct FiveElementWheel: View {
             HStack{
                 Spacer()
                 NavigationLink {
-                    ElementView(element: "water")
+                    if typeOfView == "ContentView" {
+                        ElementView(element: water)
+                    } else {
+                        //AcupointView
+                    }
                 } label: {
-                    Text(water)
+                    Text(water.capitalized)
                         .frame(width: circleSize, height: circleSize)
-                        .font(.title.bold())
                         .foregroundColor(Color.white)
                         .background(RadialGradient(gradient: Gradient(colors: [ElementColor.water.opacity(0.5), ElementColor.water, .black]), center: .center, startRadius: 0, endRadius: circleSize))
                         .clipShape(Circle())
                 }
                 NavigationLink {
-                    ElementView(element: "metal")
+                    if typeOfView == "ContentView" {
+                        ElementView(element: metal)
+                    } else {
+                        //AcupointView
+                    }
                 } label: {
-                    Text(metal)
+                    Text(metal.capitalized)
                         .frame(width: circleSize, height: circleSize)
-                        .font(.title.bold())
                         .foregroundColor(Color.black)
                         .background(RadialGradient(gradient: Gradient(colors: [ ElementColor.metal.opacity(0.1),ElementColor.metal, .black]), center: .center, startRadius: 0, endRadius: circleSize))
                         .clipShape(Circle())
