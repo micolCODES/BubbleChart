@@ -12,6 +12,7 @@
 		B227E2F52ABB48B9005B3554 /* Meridian.swift in Sources */ = {isa = PBXBuildFile; fileRef = B227E2F42ABB48B9005B3554 /* Meridian.swift */; };
 		B227E2F72ABB4901005B3554 /* Acupoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B227E2F62ABB4901005B3554 /* Acupoint.swift */; };
 		B227E2F92ABB49E3005B3554 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B227E2F82ABB49E3005B3554 /* Bundle-Decodable.swift */; };
+		B2987AE22AC6DE5B0090F338 /* star.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2987AE12AC6DE5B0090F338 /* star.swift */; };
 		B2E66B3F2ABAEA8000E94711 /* BubbleChartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E66B3E2ABAEA8000E94711 /* BubbleChartApp.swift */; };
 		B2E66B412ABAEA8000E94711 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E66B402ABAEA8000E94711 /* ContentView.swift */; };
 		B2E66B432ABAEA8100E94711 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E66B422ABAEA8100E94711 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		B227E2F42ABB48B9005B3554 /* Meridian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meridian.swift; sourceTree = "<group>"; };
 		B227E2F62ABB4901005B3554 /* Acupoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acupoint.swift; sourceTree = "<group>"; };
 		B227E2F82ABB49E3005B3554 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		B2987AE12AC6DE5B0090F338 /* star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = star.swift; sourceTree = "<group>"; };
 		B2E66B3B2ABAEA8000E94711 /* BubbleChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubbleChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E66B3E2ABAEA8000E94711 /* BubbleChartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChartApp.swift; sourceTree = "<group>"; };
 		B2E66B402ABAEA8000E94711 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				B2E66B3E2ABAEA8000E94711 /* BubbleChartApp.swift */,
 				B2E66B402ABAEA8000E94711 /* ContentView.swift */,
+				B2987AE12AC6DE5B0090F338 /* star.swift */,
 				B2FF53FA2ABDCB9600CA0512 /* AcupointView.swift */,
 				B21661C32ABD78BF00A4A13E /* FiveElementWheel.swift */,
 				B227E2F62ABB4901005B3554 /* Acupoint.swift */,
@@ -281,6 +284,7 @@
 			files = (
 				B227E2F72ABB4901005B3554 /* Acupoint.swift in Sources */,
 				B2E66B412ABAEA8000E94711 /* ContentView.swift in Sources */,
+				B2987AE22AC6DE5B0090F338 /* star.swift in Sources */,
 				B21661C42ABD78BF00A4A13E /* FiveElementWheel.swift in Sources */,
 				B2FF53FB2ABDCB9600CA0512 /* AcupointView.swift in Sources */,
 				B227E2F32ABAF548005B3554 /* ElementView.swift in Sources */,
