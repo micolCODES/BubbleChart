@@ -14,6 +14,7 @@ struct ElementView: View {
     
     var element: String
     let meridians: [String: Meridian] = Bundle.main.decode("meridiansNacupoints.json")
+    //let testMeridian = meridians["liver"]
     
     var body: some View {
         VStack {
@@ -58,7 +59,7 @@ struct ElementView: View {
                                 .font(.title2.bold())
                         }
                         HStack {
-                            //LEADING point system, HT
+                            //LEADING point system, TH
                             FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: true, circleSize: circleSize, typeOfView: "ElementView")
                                 .font(.title2.bold())
                             //TRAILING point system, PC
@@ -74,20 +75,20 @@ struct ElementView: View {
         }
     }
         
-        func elementColorPicker (_ element: String) -> Color{
-            switch element {
-            case "wood": return ElementColor.wood
-            case "fire": return ElementColor.fire
-            case "earth": return ElementColor.earth
-            case "metal": return ElementColor.metal
-            case "water": return ElementColor.water
-            default: return Color.white
-            }
+    func elementColorPicker (_ element: String) -> Color{
+        switch element {
+        case "wood": return ElementColor.wood
+        case "fire": return ElementColor.fire
+        case "earth": return ElementColor.earth
+        case "metal": return ElementColor.metal
+        case "water": return ElementColor.water
+        default: return Color.white
         }
+    }
+    
+    func elementAcupointsPicker(_ element: String) {
         
-        func elementAcupointsPicker(_ element: String) {
-            
-        }
+    }
 }
 
 #Preview {
