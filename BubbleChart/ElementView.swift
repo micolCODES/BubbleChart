@@ -15,7 +15,6 @@ struct ElementView: View {
     var element: String
     let meridians: [String: Meridian] = Bundle.main.decode("meridiansNacupoints.json")
     
-    
     var body: some View {
         VStack {
             VStack{
