@@ -1,6 +1,6 @@
 {
   "liver": {
-    "id": "liver",
+    "id": "LIV",
     "element": "wood",
     "yinYang": "yin",
     "points": [
@@ -49,7 +49,7 @@
     ]
   },
   "gallbladder": {
-    "id": "gallbladder",
+    "id": "GB",
     "element": "wood",
     "yinYang": "yang",
     "points": [
@@ -98,7 +98,7 @@
     ]
   },
   "heart": {
-    "id": "heart",
+    "id": "HT",
     "element": "fire",
     "yinYang": "yin",
     "points": [
@@ -147,7 +147,7 @@
     ]
   },
   "small intestine": {
-    "id": "smallintestine",
+    "id": "SI",
     "element": "fire",
     "yinYang": "yang",
     "points": [
@@ -196,7 +196,7 @@
     ]
   },
   "pericardium": {
-    "id": "pericardium",
+    "id": "PC",
     "element": "fire",
     "yinYang": "yin",
     "points": [
@@ -245,7 +245,7 @@
     ]
   },
   "triple heater": {
-    "id": "tripleheater",
+    "id": "TH",
     "element": "fire",
     "yinYang": "yang",
     "points": [
@@ -294,7 +294,7 @@
     ]
   },
   "spleen": {
-    "id": "spleen",
+    "id": "SP",
     "element": "earth",
     "yinYang": "yin",
     "points": [
@@ -343,7 +343,7 @@
     ]
   },
   "stomach": {
-    "id": "stomach",
+    "id": "ST",
     "element": "earth",
     "yinYang": "yang",
     "points": [
@@ -392,7 +392,7 @@
     ]
   },
   "lung": {
-    "id": "lung",
+    "id": "LU",
     "element": "metal",
     "yinYang": "yin",
     "points": [
@@ -441,7 +441,7 @@
     ]
   },
   "large intestine": {
-    "id": "largeintestine",
+    "id": "LI",
     "element": "metal",
     "yinYang": "yang",
     "points": [
@@ -490,7 +490,7 @@
     ]
   },
   "kidney": {
-    "id": "kidney",
+    "id": "KID",
     "element": "water",
     "yinYang": "yin",
     "points": [
@@ -539,7 +539,7 @@
     ]
   },
   "bladder": {
-    "id": "bladder",
+    "id": "BL",
     "element": "water",
     "yinYang": "yang",
     "points": [
