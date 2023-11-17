@@ -31,7 +31,7 @@ struct ContentView: View {
         NavigationStack {
             VStack {
                 HStack{}
-                FiveElementWheel(wood: "wood", fire: "fire", earth: "earth", metal: "metal", water: "water", master: "\(meridians.count == 12 ? "JSON ✅" : "Cannot read JSON")", yin: true, circleSize: circleSize, typeOfView: "ContentView")
+                FiveElementWheel(wood: "wood", fire: "fire", earth: "earth", metal: "metal", water: "water", master: "\(meridians.count == 12 ? "JSON ✅" : "Cannot read JSON")", yin: true, circleSize: circleSize, typeOfView: "ContentView", meridian: "")
                     .font(.title.bold())
                 HStack{}
             }
