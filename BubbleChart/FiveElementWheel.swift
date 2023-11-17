@@ -18,9 +18,7 @@ struct FiveElementWheel: View {
     var yin: Bool
     var circleSize: CGFloat
     var typeOfView: String
-    
-    
-    let meridians: [String: Meridian] = Bundle.main.decode("meridiansNacupoints.json")
+    var meridian: String
     
     var body: some View {
         VStack{
@@ -30,7 +28,7 @@ struct FiveElementWheel: View {
                     if typeOfView == "ContentView" {
                         ElementView(element: fire)
                     } else {
-                        AcupointView(acupoint: "XXX")
+                        AcupointView(meridian: meridian, acupoint: fire)
                     }
                 } label: {
                     Text(fire.capitalized)
@@ -46,7 +44,7 @@ struct FiveElementWheel: View {
                     if typeOfView == "ContentView" {
                         ElementView(element: wood)
                     } else {
-                        AcupointView(acupoint: "XXX")
+                        AcupointView(meridian: meridian, acupoint: wood)
                     }
                 } label: {
                     Text(wood.capitalized)
@@ -66,7 +64,7 @@ struct FiveElementWheel: View {
                     if typeOfView == "ContentView" {
                         ElementView(element: earth)
                     } else {
-                        AcupointView(acupoint: "XXX")
+                        AcupointView(meridian: meridian, acupoint: earth)
                     }
                 } label: {
                     Text(earth.capitalized)
@@ -82,7 +80,7 @@ struct FiveElementWheel: View {
                     if typeOfView == "ContentView" {
                         ElementView(element: water)
                     } else {
-                        AcupointView(acupoint: "XXX")
+                        AcupointView(meridian: meridian, acupoint: water)
                     }
                 } label: {
                     Text(water.capitalized)
@@ -95,7 +93,7 @@ struct FiveElementWheel: View {
                     if typeOfView == "ContentView" {
                         ElementView(element: metal)
                     } else {
-                        AcupointView(acupoint: "XXX")
+                        AcupointView(meridian: meridian, acupoint: metal)
                     }
                 } label: {
                     Text(metal.capitalized)
