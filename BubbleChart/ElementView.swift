@@ -28,6 +28,7 @@ struct ElementView: View {
             ZStack {
                 //for normal elements with 2 meridians
                 if element != "fire" {
+                    //for elements with Yin to the right
                     if (element == "wood" || element == "water") {
                         Circle()
                         //color will depend on element chosen
@@ -35,28 +36,49 @@ struct ElementView: View {
                         VStack {
                             Spacer()
                             HStack {
+                                Spacer()
+                                Text(leadingMeridian.id)
+                                    .font(.title.bold())
+                                Spacer()
+                                Spacer()
+                                Text(trailingMeridian.id)
+                                    .font(.title.bold())
+                                Spacer()
+                            }
+                            HStack {
                                 //LEADING point system
-                                FiveElementWheel(wood: leadingMeridian.points[3].name, fire: leadingMeridian.points[4].name, earth: leadingMeridian.points[5].name, metal: leadingMeridian.points[1].name, water: leadingMeridian.points[2].name, master: leadingMeridian.points[0].name, yin: true, circleSize: circleSize, typeOfView: "ElementView")
+                                FiveElementWheel(wood: leadingMeridian.points[3].name, fire: leadingMeridian.points[4].name, earth: leadingMeridian.points[5].name, metal: leadingMeridian.points[1].name, water: leadingMeridian.points[2].name, master: leadingMeridian.points[0].name, yin: true, circleSize: circleSize, typeOfView: "ElementView", meridian: leadingMeridian.id)
                                     .font(.title2.bold())
                                 //TRAILING point system
-                                FiveElementWheel(wood: trailingMeridian.points[1].name, fire: trailingMeridian.points[2].name, earth: trailingMeridian.points[3].name, metal: trailingMeridian.points[4].name, water: trailingMeridian.points[5].name, master: trailingMeridian.points[0].name, yin: false, circleSize: circleSize, typeOfView: "ElementView")
+                                FiveElementWheel(wood: trailingMeridian.points[1].name, fire: trailingMeridian.points[2].name, earth: trailingMeridian.points[3].name, metal: trailingMeridian.points[4].name, water: trailingMeridian.points[5].name, master: trailingMeridian.points[0].name, yin: false, circleSize: circleSize, typeOfView: "ElementView", meridian: leadingMeridian.id)
                                     .font(.title2.bold())
                             }
                             .frame(maxWidth: .infinity)
                             Spacer()
                         }
                     } else {
+                        //for elements with Yin to the left
                         Circle()
                         //color will depend on element chosen
                             .fill(RadialGradient(gradient: Gradient(colors: [elementColorPicker(element).opacity(0.1), elementColorPicker(element), .black.opacity(0.3)]), center: .center, startRadius: 0, endRadius: 300))
                         VStack {
                             Spacer()
                             HStack {
+                                Spacer()
+                                Text(leadingMeridian.id)
+                                    .font(.title.bold())
+                                Spacer()
+                                Spacer()
+                                Text(trailingMeridian.id)
+                                    .font(.title.bold())
+                                Spacer()
+                            }
+                            HStack {
                                 //LEADING point system
-                                FiveElementWheel(wood: leadingMeridian.points[1].name, fire: leadingMeridian.points[2].name, earth: leadingMeridian.points[3].name, metal: leadingMeridian.points[4].name, water: leadingMeridian.points[5].name, master: leadingMeridian.points[0].name, yin: true, circleSize: circleSize, typeOfView: "ElementView")
+                                FiveElementWheel(wood: leadingMeridian.points[1].name, fire: leadingMeridian.points[2].name, earth: leadingMeridian.points[3].name, metal: leadingMeridian.points[4].name, water: leadingMeridian.points[5].name, master: leadingMeridian.points[0].name, yin: true, circleSize: circleSize, typeOfView: "ElementView", meridian: leadingMeridian.id)
                                     .font(.title2.bold())
                                 //TRAILING point system
-                                FiveElementWheel(wood: trailingMeridian.points[3].name, fire: trailingMeridian.points[4].name, earth: trailingMeridian.points[5].name, metal: trailingMeridian.points[1].name, water: trailingMeridian.points[2].name, master: trailingMeridian.points[0].name, yin: false, circleSize: circleSize, typeOfView: "ElementView")
+                                FiveElementWheel(wood: trailingMeridian.points[3].name, fire: trailingMeridian.points[4].name, earth: trailingMeridian.points[5].name, metal: trailingMeridian.points[1].name, water: trailingMeridian.points[2].name, master: trailingMeridian.points[0].name, yin: false, circleSize: circleSize, typeOfView: "ElementView", meridian: leadingMeridian.id)
                                     .font(.title2.bold())
                             }
                             .frame(maxWidth: .infinity)
@@ -73,18 +95,18 @@ struct ElementView: View {
                         Spacer()
                         HStack {
                             //LEADING point system, SI
-                            FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: false, circleSize: circleSize, typeOfView: "ElementView")
+                            FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: false, circleSize: circleSize, typeOfView: "ElementView", meridian: leadingMeridian.id)
                                 .font(.title2.bold())
                             //TRAILING point system, TH
-                            FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: false, circleSize: circleSize, typeOfView: "ElementView")
+                            FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: false, circleSize: circleSize, typeOfView: "ElementView", meridian: leadingMeridian.id)
                                 .font(.title2.bold())
                         }
                         HStack {
                             //LEADING point system, TH
-                            FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: true, circleSize: circleSize, typeOfView: "ElementView")
+                            FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: true, circleSize: circleSize, typeOfView: "ElementView", meridian: leadingMeridian.id)
                                 .font(.title2.bold())
                             //TRAILING point system, PC
-                            FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: true, circleSize: circleSize, typeOfView: "ElementView")
+                            FiveElementWheel(wood: "XXX", fire: "XXX", earth: "XXX", metal: "XXX", water: "XXX", master: "XXX", yin: true, circleSize: circleSize, typeOfView: "ElementView", meridian: leadingMeridian.id)
                                 .font(.title2.bold())
                         }
                         .frame(maxWidth: .infinity)
