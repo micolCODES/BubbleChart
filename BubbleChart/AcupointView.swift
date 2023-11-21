@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct AcupointView: View {
-    var meridian: String
+    var meridian: Meridian
     var acupoint: String
+    var yin: Bool
+    var pointElement: String
     
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
+                let acupointInfo = meridian
+                let level = setPoint(yin: yin, pointElement: pointElement)
+                
                 VStack {
                     ScrollView(.horizontal){
                         HStack{
@@ -26,17 +31,41 @@ struct AcupointView: View {
                         }
                     }
                     VStack(alignment: .leading){
-                        Text("\(meridian)-\(acupoint)")
-                        Text("Level: XXX")
-                        Text("Acupoint description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+                        Text("\(acupointInfo.points[level].id)")
+                        Text("Level: \(level != 0 ? "\(level)" : "Master Point")")
+                        Text("Acupoint description: \(acupointInfo.points[level].description)")
                     }
                     .padding()
                 }
             }
         }
     }
+    
+//    METHODS GO HERE
+    func setPoint(yin: Bool, pointElement: String) -> Int {
+        if yin {
+            switch pointElement {
+            case "wood": return 1
+            case "fire": return 2
+            case "earth": return 3
+            case "metal": return 4
+            case "water": return 5
+            case "master": return 0
+            default: return 0
+            }
+        } else {
+            switch pointElement {
+            case "wood": return 3
+            case "fire": return 4
+            case "earth": return 5
+            case "metal": return 1
+            case "water": return 2
+            default: return 0
+            }
+        }
+    }
 }
 
-#Preview {
-    AcupointView(meridian: "LIV", acupoint: "3")
-}
+//#Preview {
+//    AcupointView(meridian: "LIV", acupoint: "3")
+//}
