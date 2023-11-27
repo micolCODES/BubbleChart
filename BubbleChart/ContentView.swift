@@ -23,15 +23,14 @@ struct ElementColor{
 
 struct ContentView: View {
     
-    @State private var circleSize = CGFloat(120)
-    
     let meridians: [String: Meridian] = Bundle.main.decode("meridiansNacupoints.json")
     
     var body: some View {
         NavigationStack {
             VStack {
+                
                 HStack{}
-                FiveElementWheel(wood: "wood", fire: "fire", earth: "earth", metal: "metal", water: "water", master: "\(meridians.count == 12 ? "JSON ✅" : "Cannot read JSON")", yin: true, circleSize: circleSize, typeOfView: "ContentView", meridian: "")
+                FiveElementWheelElements()
                     .font(.title.bold())
                 HStack{}
             }
