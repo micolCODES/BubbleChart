@@ -23,7 +23,7 @@ struct FiveElementWheelAcupoints: View {
             HStack{
                 Spacer()
                 NavigationLink {
-                    AcupointView(meridian: meridian, acupoint: fire, yin: yin, pointElement: "fire")
+                    AcupointView(meridian: meridian, yin: yin, pointElement: "fire")
                 } label: {
                     Text(fire.capitalized)
                         .frame(width: 50, height: 50)
@@ -35,7 +35,7 @@ struct FiveElementWheelAcupoints: View {
             }
             HStack{
                 NavigationLink {
-                        AcupointView(meridian: meridian, acupoint: wood, yin: yin, pointElement: "wood")
+                        AcupointView(meridian: meridian, yin: yin, pointElement: "wood")
                 } label: {
                     Text(wood.capitalized)
                         .frame(width: 50, height: 50)
@@ -44,7 +44,7 @@ struct FiveElementWheelAcupoints: View {
                         .clipShape(Circle())
                 }
                 NavigationLink {
-                        AcupointView(meridian: meridian, acupoint: master, yin: yin, pointElement: "master")
+                        AcupointView(meridian: meridian, yin: yin, pointElement: "master")
                 } label: {
                     Text(master.capitalized)
                         .frame(width: 50, height: 50)
@@ -53,7 +53,7 @@ struct FiveElementWheelAcupoints: View {
                         .clipShape(Circle())
                 }
                 NavigationLink {
-                        AcupointView(meridian: meridian, acupoint: earth, yin: yin, pointElement: "earth")
+                        AcupointView(meridian: meridian, yin: yin, pointElement: "earth")
                 } label: {
                     Text(earth.capitalized)
                         .frame(width: 50, height: 50)
@@ -65,7 +65,7 @@ struct FiveElementWheelAcupoints: View {
             HStack{
                 Spacer()
                 NavigationLink {
-                        AcupointView(meridian: meridian, acupoint: water, yin: yin, pointElement: "water")
+                        AcupointView(meridian: meridian, yin: yin, pointElement: "water")
                 } label: {
                     Text(water.capitalized)
                         .frame(width: 50, height: 50)
@@ -74,7 +74,7 @@ struct FiveElementWheelAcupoints: View {
                         .clipShape(Circle())
                 }
                 NavigationLink {
-                        AcupointView(meridian: meridian, acupoint: metal, yin: yin, pointElement: "metal")
+                        AcupointView(meridian: meridian, yin: yin, pointElement: "metal")
                 } label: {
                     Text(metal.capitalized)
                         .frame(width: 50, height: 50)
