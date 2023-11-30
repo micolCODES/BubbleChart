@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B20E90862B0A2DFC006BF79D /* FiveElementsWheelAcupoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20E90852B0A2DFC006BF79D /* FiveElementsWheelAcupoints.swift */; };
-		B20E90882B0A4442006BF79D /* influentialNmasterPoints.json in Resources */ = {isa = PBXBuildFile; fileRef = B20E90872B0A4442006BF79D /* influentialNmasterPoints.json */; };
 		B20E908A2B0A4461006BF79D /* InfluentialAndMasterPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20E90892B0A4461006BF79D /* InfluentialAndMasterPointsView.swift */; };
 		B20E908E2B0A451E006BF79D /* InfluentialMasterPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20E908D2B0A451E006BF79D /* InfluentialMasterPoint.swift */; };
 		B21661C42ABD78BF00A4A13E /* FiveElementWheelElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21661C32ABD78BF00A4A13E /* FiveElementWheelElements.swift */; };
@@ -16,6 +15,9 @@
 		B227E2F52ABB48B9005B3554 /* Meridian.swift in Sources */ = {isa = PBXBuildFile; fileRef = B227E2F42ABB48B9005B3554 /* Meridian.swift */; };
 		B227E2F72ABB4901005B3554 /* Acupoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B227E2F62ABB4901005B3554 /* Acupoint.swift */; };
 		B227E2F92ABB49E3005B3554 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B227E2F82ABB49E3005B3554 /* Bundle-Decodable.swift */; };
+		B255AFFA2B1762C700803612 /* MasterPoints.json in Resources */ = {isa = PBXBuildFile; fileRef = B255AFF92B1762C700803612 /* MasterPoints.json */; };
+		B255AFFC2B1762D400803612 /* InfluentialPoints.json in Resources */ = {isa = PBXBuildFile; fileRef = B255AFFB2B1762D400803612 /* InfluentialPoints.json */; };
+		B255B0002B188DF000803612 /* ExtraAcupointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B255AFFF2B188DF000803612 /* ExtraAcupointView.swift */; };
 		B2987AE22AC6DE5B0090F338 /* star.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2987AE12AC6DE5B0090F338 /* star.swift */; };
 		B2E66B3F2ABAEA8000E94711 /* BubbleChartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E66B3E2ABAEA8000E94711 /* BubbleChartApp.swift */; };
 		B2E66B412ABAEA8000E94711 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E66B402ABAEA8000E94711 /* ContentView.swift */; };
@@ -47,7 +49,6 @@
 
 /* Begin PBXFileReference section */
 		B20E90852B0A2DFC006BF79D /* FiveElementsWheelAcupoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveElementsWheelAcupoints.swift; sourceTree = "<group>"; };
-		B20E90872B0A4442006BF79D /* influentialNmasterPoints.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = influentialNmasterPoints.json; sourceTree = "<group>"; };
 		B20E90892B0A4461006BF79D /* InfluentialAndMasterPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfluentialAndMasterPointsView.swift; sourceTree = "<group>"; };
 		B20E908D2B0A451E006BF79D /* InfluentialMasterPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfluentialMasterPoint.swift; sourceTree = "<group>"; };
 		B21661C32ABD78BF00A4A13E /* FiveElementWheelElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveElementWheelElements.swift; sourceTree = "<group>"; };
@@ -55,6 +56,9 @@
 		B227E2F42ABB48B9005B3554 /* Meridian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meridian.swift; sourceTree = "<group>"; };
 		B227E2F62ABB4901005B3554 /* Acupoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acupoint.swift; sourceTree = "<group>"; };
 		B227E2F82ABB49E3005B3554 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		B255AFF92B1762C700803612 /* MasterPoints.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MasterPoints.json; sourceTree = "<group>"; };
+		B255AFFB2B1762D400803612 /* InfluentialPoints.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = InfluentialPoints.json; path = ../../../../../../../Users/micol/Desktop/InfluentialPoints.json; sourceTree = "<group>"; };
+		B255AFFF2B188DF000803612 /* ExtraAcupointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraAcupointView.swift; sourceTree = "<group>"; };
 		B2987AE12AC6DE5B0090F338 /* star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = star.swift; sourceTree = "<group>"; };
 		B2E66B3B2ABAEA8000E94711 /* BubbleChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubbleChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E66B3E2ABAEA8000E94711 /* BubbleChartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChartApp.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 				B2E66B402ABAEA8000E94711 /* ContentView.swift */,
 				B2987AE12AC6DE5B0090F338 /* star.swift */,
 				B2FF53FA2ABDCB9600CA0512 /* AcupointView.swift */,
+				B255AFFF2B188DF000803612 /* ExtraAcupointView.swift */,
 				B21661C32ABD78BF00A4A13E /* FiveElementWheelElements.swift */,
 				B20E90892B0A4461006BF79D /* InfluentialAndMasterPointsView.swift */,
 				B20E908D2B0A451E006BF79D /* InfluentialMasterPoint.swift */,
@@ -132,7 +137,8 @@
 				B227E2F22ABAF548005B3554 /* ElementView.swift */,
 				B2E66B422ABAEA8100E94711 /* Assets.xcassets */,
 				B2E66B682ABAEB4800E94711 /* meridiansNacupoints.json */,
-				B20E90872B0A4442006BF79D /* influentialNmasterPoints.json */,
+				B255AFF92B1762C700803612 /* MasterPoints.json */,
+				B255AFFB2B1762D400803612 /* InfluentialPoints.json */,
 				B2E66B442ABAEA8100E94711 /* Preview Content */,
 			);
 			path = BubbleChart;
@@ -269,8 +275,9 @@
 			files = (
 				B2E66B462ABAEA8100E94711 /* Preview Assets.xcassets in Resources */,
 				B2E66B432ABAEA8100E94711 /* Assets.xcassets in Resources */,
+				B255AFFC2B1762D400803612 /* InfluentialPoints.json in Resources */,
+				B255AFFA2B1762C700803612 /* MasterPoints.json in Resources */,
 				B2E66B692ABAEB4800E94711 /* meridiansNacupoints.json in Resources */,
-				B20E90882B0A4442006BF79D /* influentialNmasterPoints.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +307,7 @@
 				B2E66B412ABAEA8000E94711 /* ContentView.swift in Sources */,
 				B20E908E2B0A451E006BF79D /* InfluentialMasterPoint.swift in Sources */,
 				B2987AE22AC6DE5B0090F338 /* star.swift in Sources */,
+				B255B0002B188DF000803612 /* ExtraAcupointView.swift in Sources */,
 				B21661C42ABD78BF00A4A13E /* FiveElementWheelElements.swift in Sources */,
 				B20E90862B0A2DFC006BF79D /* FiveElementsWheelAcupoints.swift in Sources */,
 				B2FF53FB2ABDCB9600CA0512 /* AcupointView.swift in Sources */,

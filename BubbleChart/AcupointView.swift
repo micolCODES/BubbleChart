@@ -9,7 +9,6 @@ import SwiftUI
 
 struct AcupointView: View {
     var meridian: Meridian
-    var acupoint: String
     var yin: Bool
     var pointElement: String
     
@@ -33,6 +32,7 @@ struct AcupointView: View {
                     VStack(alignment: .leading){
                         Text("\(acupointInfo.points[level].id)")
                         Text("Level: \(level != 0 ? "\(level)" : "Master Point")")
+                        Text("Five Element Theory Element: \(acupointInfo.points[level].element)")
                         Text("Acupoint description: \(acupointInfo.points[level].description)")
                     }
                     .padding()
