@@ -23,12 +23,9 @@ struct ElementColor{
 
 struct ContentView: View {
     
-    let meridians: [String: Meridian] = Bundle.main.decode("meridiansNacupoints.json")
-    
     var body: some View {
         NavigationStack {
             VStack {
-                
                 HStack{}
                 FiveElementWheelElements()
                     .font(.title.bold())
@@ -36,6 +33,7 @@ struct ContentView: View {
             }
             .padding()
             .navigationTitle("5 Elements")
+            Spacer()
         }
     }
     
