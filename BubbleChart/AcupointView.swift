@@ -32,7 +32,7 @@ struct AcupointView: View {
                     VStack(alignment: .leading){
                         Text("\(acupointInfo.points[level].id)")
                         Text("Level: \(level != 0 ? "\(level)" : "Master Point")")
-                        Text("Five Element Theory Element: \(acupointInfo.points[level].element)")
+                        Text("Five Element Theory Element: \(acupointInfo.points[level].element.capitalized)")
                         Text("Acupoint description: \(acupointInfo.points[level].description)")
                     }
                     .padding()
