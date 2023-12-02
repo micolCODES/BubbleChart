@@ -18,25 +18,47 @@ struct ElementColor{
     static let lightmetal = Color("lightmetal")
     static let water = Color("water")
     static let lightwater = Color("lightwater")
+    static let influential = Color("influential")
+    static let lightinfluential = Color("lightinfluential")
+    static let master = Color("master")
+    static let lightmaster = Color("lightmaster")
     
 }
 
 struct ContentView: View {
+    @State private var isHorse = true
     
     var body: some View {
         NavigationStack {
             VStack {
-                HStack{}
-                FiveElementWheelElements()
-                    .font(.title.bold())
-                HStack{}
+                Spacer()
+                Spacer()
+                ZStack {
+                    Circle()
+                        .fill(.white)
+                        .stroke(.gray.opacity(0.15), style: StrokeStyle(lineWidth: 10))
+                        .frame(width: 300, height: 300)
+//                        StarShape()
+//                            .stroke(.black, style: StrokeStyle(lineWidth: 1, lineJoin: .miter))
+//                            .rotationEffect(Angle(degrees: 17))
+//                            .frame(width: 200, height: 200)
+                    FiveElementWheelElements()
+                        .font(.title.bold())
+                }
+                Spacer()
+                VStack {
+                    //REPLACE TOGGLE WITH CUSTOM FLIP TOGGLE WITH CUSTOM IMAGE OF HORSE AND DOG
+                    Toggle("\(isHorse ? "🐴" : "🐶🐱")", isOn: $isHorse)
+                        .toggleStyle(.button)
+                        .font(.system(size: 100))
+                        .tint(.white)
+                }
+                Spacer()
             }
             .padding()
-            .navigationTitle("5 Elements")
-            Spacer()
+            //.navigationTitle("5 Elements")
         }
     }
-    
 }
 
 #Preview {
