@@ -27,7 +27,7 @@ struct FiveElementWheelAcupoints: View {
                 } label: {
                     Text(fire.capitalized)
                         .frame(width: 50, height: 50)
-                        .foregroundColor(Color.white)
+                        .foregroundColor(Color.black)
                         .background(RadialGradient(gradient: Gradient(colors: [ElementColor.lightfire, ElementColor.fire]), center: .center, startRadius: 0, endRadius: 50))
                         .clipShape(Circle())
                 }
@@ -51,6 +51,9 @@ struct FiveElementWheelAcupoints: View {
                         .foregroundColor(Color.black)
                         .background(Color.white.gradient)
                         .clipShape(Circle())
+                        .overlay(Circle()
+                            .stroke(.black, style: StrokeStyle(lineWidth: 3, dash: [5, 7]))
+                        )
                 }
                 NavigationLink {
                         AcupointView(meridian: meridian, yin: yin, pointElement: "earth")
