@@ -46,6 +46,7 @@ struct ContentView: View {
                         .font(.title.bold())
                 }
                 Spacer()
+                //Add meridian charts
                 VStack {
                     //REPLACE TOGGLE WITH CUSTOM FLIP TOGGLE WITH CUSTOM IMAGE OF HORSE AND DOG
                     Toggle("\(isHorse ? "🐴" : "🐶🐱")", isOn: $isHorse)

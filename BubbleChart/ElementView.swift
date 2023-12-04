@@ -35,7 +35,7 @@ struct ElementView: View {
                     if (element == "wood" || element == "water") {
                         Circle()
                         //color will depend on element chosen
-                            .fill(RadialGradient(gradient: Gradient(colors: [elementColorPicker(element).opacity(0.1), elementColorPicker(element), .black.opacity(0.3)]), center: .center, startRadius: 0, endRadius: 300))
+                            .fill(RadialGradient(gradient: Gradient(colors: [elementColorPicker(element).1.opacity(0.1), elementColorPicker(element).0.opacity(0.7)]), center: .center, startRadius: 0, endRadius: 300))
                         VStack {
                             Spacer()
                             HStack {
@@ -63,7 +63,7 @@ struct ElementView: View {
                         //for elements with Yin to the left
                         Circle()
                         //color will depend on element chosen
-                            .fill(RadialGradient(gradient: Gradient(colors: [elementColorPicker(element).opacity(0.1), elementColorPicker(element), .black.opacity(0.3)]), center: .center, startRadius: 0, endRadius: 300))
+                            .fill(RadialGradient(gradient: Gradient(colors: [elementColorPicker(element).1.opacity(0.1), elementColorPicker(element).0.opacity(0.7)]), center: .center, startRadius: 0, endRadius: 300))
                         VStack {
                             Spacer()
                             HStack {
@@ -88,11 +88,13 @@ struct ElementView: View {
                             Spacer()
                         }
                     }
-                } else { //for the fire element that has 4 meridians
+                } else {
+                    
+                    //for the FIRE element that has 4 meridians
+                    
                     Rectangle()
-                    //Circle()
-                    //color will depend on element chosen
-                        .fill(RadialGradient(gradient: Gradient(colors: [elementColorPicker(element).opacity(0.1), elementColorPicker(element), .black.opacity(0.3)]), center: .center, startRadius: 0, endRadius: 400))
+                        .fill(RadialGradient(gradient: Gradient(colors: [elementColorPicker(element).1.opacity(0.1), elementColorPicker(element).0.opacity(0.6)]), center: .center, startRadius: 0, endRadius: 400))
+//                        .fill(RadialGradient(gradient: Gradient(colors: [elementColorPicker(element).opacity(0.1), elementColorPicker(element), .black.opacity(0.3)]), center: .center, startRadius: 0, endRadius: 400))
                         .frame(height: 550)
                         .cornerRadius(150)
                     VStack {
@@ -174,14 +176,14 @@ struct ElementView: View {
             }
     }
         
-    func elementColorPicker (_ element: String) -> Color{
+    func elementColorPicker (_ element: String) -> (Color, Color){
         switch element {
-        case "wood": return ElementColor.wood
-        case "fire": return ElementColor.fire
-        case "earth": return ElementColor.earth
-        case "metal": return ElementColor.metal
-        case "water": return ElementColor.water
-        default: return Color.white
+        case "wood": return (ElementColor.wood, ElementColor.lightwood)
+        case "fire": return (ElementColor.fire, ElementColor.lightfire)
+        case "earth": return (ElementColor.earth, ElementColor.lightearth)
+        case "metal": return (ElementColor.metal, ElementColor.lightmetal)
+        case "water": return (ElementColor.water, ElementColor.lightwater)
+        default: return (Color.white, Color.white)
         }
     }
     

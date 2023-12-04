@@ -19,7 +19,7 @@ struct FiveElementWheelElements: View {
                 } label: {
                     Text("Fire")
                         .frame(width: 120, height: 120)
-                        .foregroundColor(Color.white)
+                        .foregroundColor(Color.black)
                         .background(RadialGradient(gradient: Gradient(colors: [ElementColor.lightfire, ElementColor.fire]), center: .center, startRadius: 0, endRadius: 120))
                         .clipShape(Circle())
                 }
