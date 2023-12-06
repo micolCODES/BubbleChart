@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AcupointView: View {
+    @EnvironmentObject var specie: SetSpecie
+    
     var meridian: Meridian
     var yin: Bool
     var pointElement: String
@@ -34,6 +36,7 @@ struct AcupointView: View {
                         Text("Level: \(level != 0 ? "\(level)" : "Master Point")")
                         Text("Five Element Theory Element: \(acupointInfo.points[level].element.capitalized)")
                         Text("Acupoint description: \(acupointInfo.points[level].description)")
+                        Text("Specie: \(specie.specie)")
                     }
                     .padding()
                 }
@@ -67,5 +70,5 @@ struct AcupointView: View {
 }
 
 //#Preview {
-//    AcupointView(meridian: "LIV", acupoint: "3")
+    //AcupointView(meridian: , acupoint: "3")
 //}
