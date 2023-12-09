@@ -23,5 +23,5 @@ struct ElementColor{
     static let lightinfluential = Color("lightinfluential")
     static let master = Color("master")
     static let lightmaster = Color("lightmaster")
-    
+    static let offWhite = Color("offWhite")
 }
