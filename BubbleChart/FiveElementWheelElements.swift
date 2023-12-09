@@ -22,6 +22,8 @@ struct FiveElementWheelElements: View {
                         .foregroundColor(Color.black)
                         .background(RadialGradient(gradient: Gradient(colors: [ElementColor.lightfire, ElementColor.fire]), center: .center, startRadius: 0, endRadius: 120))
                         .clipShape(Circle())
+                        .shadow(color: Color.black.opacity(0.3), radius: 8, x: 8, y: 8)
+                        .shadow(color: Color.white, radius: 8, x: -5, y: -5)
                 }
                 Spacer()
             }
@@ -34,15 +36,27 @@ struct FiveElementWheelElements: View {
                         .foregroundColor(Color.black)
                         .background(RadialGradient(gradient: Gradient(colors: [ElementColor.lightwood, ElementColor.wood]), center: .center, startRadius: 0, endRadius: 120))
                         .clipShape(Circle())
+                        .shadow(color: Color.black.opacity(0.3), radius: 8, x: 8, y: 8)
+                        .shadow(color: Color.white, radius: 8, x: -5, y: -5)
                 }
                 NavigationLink {
                         InfluentialAndMasterPointsView()
                 } label: {
-                    Text("Master")
+                    VStack{
+                        Text("Influential")
+                            .font(.headline)
+                        Text("and")
+                            .font(.subheadline)
+                            .fontWeight(.thin)
+                        Text("Master")
+                            .font(.headline)
+                    }
                         .frame(width: 120, height: 120)
                         .foregroundColor(Color.black)
                         .background(Color.white.gradient)
                         .clipShape(Circle())
+                        .shadow(color: Color.black.opacity(0.3), radius: 8, x: 8, y: 8)
+                        .shadow(color: Color.white, radius: 8, x: -5, y: -5)
                 }
                 NavigationLink {
                         ElementView(element: "earth")
@@ -52,6 +66,8 @@ struct FiveElementWheelElements: View {
                         .foregroundColor(Color.black)
                         .background(RadialGradient(gradient: Gradient(colors: [ElementColor.lightearth, ElementColor.earth]), center: .center, startRadius: 0, endRadius: 120))
                         .clipShape(Circle())
+                        .shadow(color: Color.black.opacity(0.3), radius: 8, x: 8, y: 8)
+                        .shadow(color: Color.white, radius: 8, x: -5, y: -5)
                 }
             }
             HStack{
@@ -64,6 +80,8 @@ struct FiveElementWheelElements: View {
                         .foregroundColor(Color.white)
                         .background(RadialGradient(gradient: Gradient(colors: [ElementColor.lightwater, ElementColor.water]), center: .center, startRadius: 0, endRadius: 120))
                         .clipShape(Circle())
+                        .shadow(color: Color.black.opacity(0.3), radius: 8, x: 8, y: 8)
+                        .shadow(color: Color.white, radius: 8, x: -5, y: -5)
                 }
                 NavigationLink {
                         ElementView(element: "metal")
@@ -73,6 +91,8 @@ struct FiveElementWheelElements: View {
                         .foregroundColor(Color.black)
                         .background(RadialGradient(gradient: Gradient(colors: [ ElementColor.lightmetal, ElementColor.metal]), center: .center, startRadius: 0, endRadius: 120))
                         .clipShape(Circle())
+                        .shadow(color: Color.black.opacity(0.3), radius: 8, x: 8, y: 8)
+                        .shadow(color: Color.white, radius: 8, x: -5, y: -5)
                 }
                 Spacer()
             }
