@@ -30,6 +30,8 @@ struct FiveElementWheelAcupoints: View {
                         .foregroundColor(Color.black)
                         .background(RadialGradient(gradient: Gradient(colors: [ElementColor.lightfire, ElementColor.fire]), center: .center, startRadius: 0, endRadius: 50))
                         .clipShape(Circle())
+                        .shadow(color: Color.black.opacity(0.3), radius: 5, x: 4, y: 4)
+                        .shadow(color: Color.white, radius: 5, x: -2, y: -2)
                 }
                 Spacer()
             }
@@ -42,6 +44,8 @@ struct FiveElementWheelAcupoints: View {
                         .foregroundColor(Color.black)
                         .background(RadialGradient(gradient: Gradient(colors: [ElementColor.lightwood, ElementColor.wood]), center: .center, startRadius: 0, endRadius: 50))
                         .clipShape(Circle())
+                        .shadow(color: Color.black.opacity(0.3), radius: 5, x: 4, y: 4)
+                        .shadow(color: Color.white, radius: 5, x: -2, y: -2)
                 }
                 NavigationLink {
                         AcupointView(meridian: meridian, yin: yin, pointElement: "master")
@@ -51,6 +55,8 @@ struct FiveElementWheelAcupoints: View {
                         .foregroundColor(Color.black)
                         .background(Color.white.gradient)
                         .clipShape(Circle())
+                        .shadow(color: Color.black.opacity(0.3), radius: 5, x: 4, y: 4)
+                        .shadow(color: Color.white, radius: 5, x: -2, y: -2)
                         .overlay(Circle()
                             .stroke(.black, style: StrokeStyle(lineWidth: 3, dash: [5, 7]))
                         )
@@ -63,6 +69,8 @@ struct FiveElementWheelAcupoints: View {
                         .foregroundColor(Color.black)
                         .background(RadialGradient(gradient: Gradient(colors: [ElementColor.lightearth, ElementColor.earth]), center: .center, startRadius: 0, endRadius: 50))
                         .clipShape(Circle())
+                        .shadow(color: Color.black.opacity(0.3), radius: 5, x: 4, y: 4)
+                        .shadow(color: Color.white, radius: 5, x: -2, y: -2)
                 }
             }
             HStack{
@@ -75,6 +83,8 @@ struct FiveElementWheelAcupoints: View {
                         .foregroundColor(Color.white)
                         .background(RadialGradient(gradient: Gradient(colors: [ElementColor.lightwater, ElementColor.water]), center: .center, startRadius: 0, endRadius: 50))
                         .clipShape(Circle())
+                        .shadow(color: Color.black.opacity(0.3), radius: 5, x: 4, y: 4)
+                        .shadow(color: Color.white, radius: 5, x: -2, y: -2)
                 }
                 NavigationLink {
                         AcupointView(meridian: meridian, yin: yin, pointElement: "metal")
@@ -84,6 +94,8 @@ struct FiveElementWheelAcupoints: View {
                         .foregroundColor(Color.black)
                         .background(RadialGradient(gradient: Gradient(colors: [ ElementColor.lightmetal, ElementColor.metal]), center: .center, startRadius: 0, endRadius: 50))
                         .clipShape(Circle())
+                        .shadow(color: Color.black.opacity(0.3), radius: 5, x: 4, y: 4)
+                        .shadow(color: Color.white, radius: 5, x: -2, y: -2)
                 }
                 Spacer()
             }
