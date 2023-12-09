@@ -18,43 +18,32 @@ struct InfluentialAndMasterPointsView: View {
     
     let listOfInfluentialPointsTargets = ["Zang Organs","Fu Organs","Qi","Blood","Tendon","Pulse , Vessels","Bone","Marrow","Phlegm","Wind , Trachera"]
     
-    let listOfMasterPointsTargets = ["Face , Mouth","Head , Neck","Back , Hips","GI tract , Abdomen","Forelimb","Hind Limb","Chest , Cranial Abdomen","Caudal Abdomen , Urogen"]
+    let listOfMasterPointsTargets = ["Face , Mouth","Head , Neck","Back , Hips","GI tract , Abdomen","Forelimb","Hind Limb","Chest, Cranial Abdomen","Caudal Abdomen, Urogen"]
     
     let influentialPoints: [String: InfluentialAndMasterPoint] = Bundle.main.decode("InfluentialPoints.json")
     
     let masterPoints: [String: InfluentialAndMasterPoint] = Bundle.main.decode("MasterPoints.json")
     
     var body: some View {
+        ZStack {
+            Color(ElementColor.offWhite)
+                .ignoresSafeArea()
         GeometryReader { geometry in
-            VStack{
-                HStack {
-                    Text("Influential")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .foregroundColor(ElementColor.influential)
-                    Text(" and ")
-                        .font(.title2)
-                        .fontWeight(.light)
-                        .foregroundColor(Color.black)
-                    Text("Master")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .foregroundColor(ElementColor.master)
-                    Text(" Points")
-                        .font(.title2)
-                        .fontWeight(.light)
-                        .foregroundColor(Color.black)
-                }
-                
-                ScrollView {
-                    LazyVGrid(columns: layout) {
-                        
-                        ForEach(listOfInfluentialPoints, id: \.self) { point in
-                            NavigationLink {
-                                let influentialPoint = influentialPoints[point, default: InfluentialAndMasterPoint(id: "Not Known", target: "Unknown", description: "Unknown")]
-                                ExtraAcupointView(point: influentialPoint)
-                            } label: {
-                                VStack {
+            ScrollView {
+                    VStack{
+                        HStack {
+                            Text("Influential Points")
+                                .font(.title3)
+                                .fontWeight(.bold)
+                            //.foregroundColor(ElementColor.influential)
+                        }
+                        LazyVGrid(columns: layout) {
+                            
+                            ForEach(listOfInfluentialPoints, id: \.self) { point in
+                                NavigationLink {
+                                    let influentialPoint = influentialPoints[point, default: InfluentialAndMasterPoint(id: "Not Known", target: "Unknown", description: "Unknown")]
+                                    ExtraAcupointView(point: influentialPoint)
+                                } label: {
                                     VStack {
                                         if let index = listOfInfluentialPoints.firstIndex(of: point) {
                                             Text(listOfInfluentialPointsTargets[index])
@@ -63,26 +52,38 @@ struct InfluentialAndMasterPointsView: View {
                                                 .foregroundColor(Color.black)
                                         }
                                         Text("\(point)")
-                                        //.fontWeight(.bold)
+                                            .fontWeight(.thin)
                                             .foregroundColor(Color.black)
                                     }
+                                    .padding(6)
+                                    .frame(maxWidth: .infinity)
+                                    .background(ElementColor.offWhite)
+                                    .padding(2)
+                                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                                    .shadow(color: Color.black.opacity(0.3), radius: 8, x: 8, y: 8)
+                                    .shadow(color: Color.white, radius: 8, x: -5, y: -5)
                                 }
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .fill(RadialGradient(gradient: Gradient(colors: [ElementColor.lightinfluential.opacity(0.1), ElementColor.influential.opacity(0.4)]), center: .center, startRadius: 0, endRadius: 200))
-                                    //.stroke(ElementColor.influential, lineWidth: 2)
-                                        .frame(width: 170, height: 50)
-                                )
                             }
+                            .padding(2)
                         }
                         .padding()
-                        
-                        ForEach(listOfMasterPoints, id: \.self) { point in
-                            NavigationLink {
-                                let masterPoint = masterPoints[point, default: InfluentialAndMasterPoint(id: "Not Known", target: "Unknown", description: "Unknown")]
-                                ExtraAcupointView(point: masterPoint)
-                            } label: {
-                                VStack {
+                        //.background(.lightmaster.opacity(0.5))
+//                        .overlay(RoundedRectangle(cornerRadius: 10)
+//                            .stroke(.gray.opacity(0.2), style: StrokeStyle(lineWidth: 3/*, dash: [15, 7]*/))
+//                        )
+//                        .padding(.horizontal)
+                        HStack {
+                            Text("Master Points")
+                                .font(.title3)
+                                .fontWeight(.bold)
+                            //.foregroundColor(ElementColor.master)
+                        }
+                        LazyVGrid(columns: layout) {
+                            ForEach(listOfMasterPoints, id: \.self) { point in
+                                NavigationLink {
+                                    let masterPoint = masterPoints[point, default: InfluentialAndMasterPoint(id: "Not Known", target: "Unknown", description: "Unknown")]
+                                    ExtraAcupointView(point: masterPoint)
+                                } label: {
                                     VStack {
                                         if let index = listOfMasterPoints.firstIndex(of: point) {
                                             Text(listOfMasterPointsTargets[index])
@@ -94,16 +95,22 @@ struct InfluentialAndMasterPointsView: View {
                                             .fontWeight(.thin)
                                             .foregroundColor(Color.black)
                                     }
+                                    .padding(6)
+                                    .frame(maxWidth: .infinity)
+                                    .background(ElementColor.offWhite)
+                                    .padding(2)
+                                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                                    .shadow(color: Color.black.opacity(0.3), radius: 8, x: 8, y: 8)
+                                    .shadow(color: Color.white, radius: 8, x: -5, y: -5)
                                 }
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .fill(RadialGradient(gradient: Gradient(colors: [ElementColor.lightmaster.opacity(0.1), ElementColor.master.opacity(0.4)]), center: .center, startRadius: 0, endRadius: 200))
-                                    //.stroke(ElementColor.master, lineWidth: 2)
-                                        .frame(width: 170, height: 60)
-                                )
                             }
                         }
                         .padding()
+                        //.background(.lightmaster.opacity(0.5))
+//                        .overlay(RoundedRectangle(cornerRadius: 10)
+//                            .stroke(.gray.opacity(0.2), style: StrokeStyle(lineWidth: 3/*, dash: [15, 7]*/))
+//                        )
+//                        .padding(.horizontal)
                     }
                 }
             }
