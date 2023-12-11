@@ -8,5 +8,5 @@
 import SwiftUI
 
 class SetSpecie: ObservableObject {
-    @Published var specie = "horse"
+    @Published var specie = true
 }
