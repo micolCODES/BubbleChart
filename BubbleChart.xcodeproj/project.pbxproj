@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2080D5C2B1F98BD00C43C32 /* ElementColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2080D5B2B1F98BD00C43C32 /* ElementColors.swift */; };
+		B2080D5E2B1F991600C43C32 /* SetSpecie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2080D5D2B1F991600C43C32 /* SetSpecie.swift */; };
 		B20E90862B0A2DFC006BF79D /* FiveElementsWheelAcupoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20E90852B0A2DFC006BF79D /* FiveElementsWheelAcupoints.swift */; };
 		B20E908A2B0A4461006BF79D /* InfluentialAndMasterPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20E90892B0A4461006BF79D /* InfluentialAndMasterPointsView.swift */; };
 		B20E908E2B0A451E006BF79D /* InfluentialMasterPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20E908D2B0A451E006BF79D /* InfluentialMasterPoint.swift */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B2080D5B2B1F98BD00C43C32 /* ElementColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementColors.swift; sourceTree = "<group>"; };
+		B2080D5D2B1F991600C43C32 /* SetSpecie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSpecie.swift; sourceTree = "<group>"; };
 		B20E90852B0A2DFC006BF79D /* FiveElementsWheelAcupoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveElementsWheelAcupoints.swift; sourceTree = "<group>"; };
 		B20E90892B0A4461006BF79D /* InfluentialAndMasterPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfluentialAndMasterPointsView.swift; sourceTree = "<group>"; };
 		B20E908D2B0A451E006BF79D /* InfluentialMasterPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfluentialMasterPoint.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 			children = (
 				B2E66B3E2ABAEA8000E94711 /* BubbleChartApp.swift */,
 				B2E66B402ABAEA8000E94711 /* ContentView.swift */,
+				B2080D5D2B1F991600C43C32 /* SetSpecie.swift */,
+				B2080D5B2B1F98BD00C43C32 /* ElementColors.swift */,
 				B2987AE12AC6DE5B0090F338 /* star.swift */,
 				B2FF53FA2ABDCB9600CA0512 /* AcupointView.swift */,
 				B255AFFF2B188DF000803612 /* ExtraAcupointView.swift */,
@@ -308,6 +314,8 @@
 				B20E908E2B0A451E006BF79D /* InfluentialMasterPoint.swift in Sources */,
 				B2987AE22AC6DE5B0090F338 /* star.swift in Sources */,
 				B255B0002B188DF000803612 /* ExtraAcupointView.swift in Sources */,
+				B2080D5E2B1F991600C43C32 /* SetSpecie.swift in Sources */,
+				B2080D5C2B1F98BD00C43C32 /* ElementColors.swift in Sources */,
 				B21661C42ABD78BF00A4A13E /* FiveElementWheelElements.swift in Sources */,
 				B20E90862B0A2DFC006BF79D /* FiveElementsWheelAcupoints.swift in Sources */,
 				B2FF53FB2ABDCB9600CA0512 /* AcupointView.swift in Sources */,
