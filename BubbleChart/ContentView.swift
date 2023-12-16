@@ -11,6 +11,8 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var specie = SetSpecie()
+    //@EnvironmentObject var specie: SetSpecie
+
     
     var body: some View {
         NavigationStack {
@@ -19,7 +21,6 @@ struct ContentView: View {
                     .ignoresSafeArea()
                 VStack {
                     Spacer()
-                    Spacer()
                     ZStack {
                         Circle()
 //                            .stroke(.gray.opacity(0.15), style: StrokeStyle(lineWidth: 10))
@@ -27,40 +28,36 @@ struct ContentView: View {
                             .frame(width: 300, height: 300)
                             .shadow(color: Color.black.opacity(0.3), radius: 8, x: 5, y: 5)
                             .shadow(color: Color.white, radius: 8, x: -5, y: -5)
-                        //                        StarShape()
-                        //                        .stroke(.gray.opacity(0.15), style: StrokeStyle(lineWidth: 10, lineJoin: .miter))
-                        //                            .rotationEffect(Angle(degrees: 17))
-                        //                            .frame(width: 330, height: 320)
+//                        StarShape()
+//                        .stroke(.gray.opacity(0.15), style: StrokeStyle(lineWidth: 10, lineJoin: .miter))
+//                            .rotationEffect(Angle(degrees: 17))
+//                            .frame(width: 330, height: 320)
                         FiveElementWheelElements()
                             .font(.title.bold())
                     }
                     Spacer()
-                    Spacer()
                     //Add meridian charts
-                    VStack {
-                        Toggle(isOn: $specie.specie, label: {
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 10)
-                                    .shadow(color: Color.black.opacity(0.2), radius: 8, x: 8, y: 8)
-                                    .shadow(color: Color.white, radius: 8, x: -5, y: -5)
-                                HStack{
-                                    if specie.specie {
-                                        Image("horseOffWhite")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                    } else {
-                                        Image("smallanimalsOffWhite")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                    }
-                                }
+                    Toggle(isOn: $specie.specie, label: {
+                        HStack{
+                            if specie.specie {
+                                Image("horseOffWhite")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                            } else {
+                                Image("smallanimalsOffWhite")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
                             }
-                            .frame(maxWidth: 120,maxHeight: 120)
-                        })
-                        .toggleStyle(.button)
-                        .font(.system(size: 100))
-                        .tint(ElementColor.offWhite)
-                    }
+                        }
+                        .frame(maxWidth: 80,maxHeight: 60)
+                        .clipShape(RoundedRectangle(cornerSize: CGSize(width: 5, height: 5)))
+                        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 5, y: 5)
+                        .shadow(color: Color.white, radius: 8, x: -5, y: -5)
+                    })
+                    .toggleStyle(.button)
+                    .font(.system(size: 100))
+                    .tint(ElementColor.offWhite)
+                    //.offset(x: 0, y: +20)
                 }
                 .padding()
                 //.navigationTitle("5 Elements")
@@ -72,4 +69,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(SetSpecie())
 }
