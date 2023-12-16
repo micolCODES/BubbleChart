@@ -15,36 +15,70 @@ struct AcupointView: View {
     var pointElement: String
     
     var body: some View {
-        GeometryReader { geometry in
-            ScrollView {
-                let acupointInfo = meridian
-                let level = setPoint(yin: yin, pointElement: pointElement)
-                
-                VStack {
-                    ScrollView(.horizontal){
-                        HStack{
-                            Image("placeholder")
+        ZStack {
+            let acupointInfo = meridian
+            let level = setPoint(yin: yin, pointElement: pointElement)
+            let specieOfImages = specie.specie ? "horse" : "smallanimals"
+            let pointName = "\(specieOfImages)-\(acupointInfo.points[level].id)"
+            
+            Color(ElementColor.offWhite)
+                .ignoresSafeArea()
+            
+            VStack {
+                GeometryReader { geometry in
+                    ScrollView {
+                        
+                        VStack {
+                            ScrollView(.horizontal){
+                                HStack{
+                                    Image("test")
+                                        .resizable()
+                                        .scaledToFit()
+                                }
+                            }
+                        }
+                        VStack(alignment: .leading){
+                            Text("\(acupointInfo.points[level].id)")
+                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                .font(.headline)
+                            Text("Level: \(level != 0 ? "\(level)" : "Master Point")")
+                            Text("Five Element Theory Element: \(acupointInfo.points[level].element.capitalized)")
+                            Text("Acupoint description: \(acupointInfo.points[level].description)")
+                            Text("Specie: \(specieOfImages)")
+                            Text("Image name: \(pointName)")
+                            Text("Is the specie \"horse\"? \(specie.specie ? "True, It's horse" : "False, it's smallanimals")")
+                            Text("Long Text: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.")
+                        }
+                        .padding(.horizontal)
+                    }
+                }
+                Spacer()
+                Toggle(isOn: $specie.specie, label: {
+                    HStack{
+                        if specie.specie {
+                            Image("horseOffWhite")
                                 .resizable()
-                                .scaledToFit()
-                            Image("placeholder")
+                                .aspectRatio(contentMode: .fit)
+                        } else {
+                            Image("smallanimalsOffWhite")
                                 .resizable()
-                                .scaledToFit()
+                                .aspectRatio(contentMode: .fit)
                         }
                     }
-                    VStack(alignment: .leading){
-                        Text("\(acupointInfo.points[level].id)")
-                        Text("Level: \(level != 0 ? "\(level)" : "Master Point")")
-                        Text("Five Element Theory Element: \(acupointInfo.points[level].element.capitalized)")
-                        Text("Acupoint description: \(acupointInfo.points[level].description)")
-                        Text("Specie: \(specie.specie)")
-                    }
-                    .padding()
-                }
+                    .frame(maxWidth: 80,maxHeight: 60)
+                    .clipShape(RoundedRectangle(cornerSize: CGSize(width: 5, height: 5)))
+                    .shadow(color: Color.black.opacity(0.2), radius: 5, x: 5, y: 5)
+                    .shadow(color: Color.white, radius: 8, x: -5, y: -5)
+                })
+                .toggleStyle(.button)
+                .font(.system(size: 100))
+                .tint(ElementColor.offWhite)
             }
         }
     }
     
-//    METHODS GO HERE
+    
+    //    METHODS GO HERE
     func setPoint(yin: Bool, pointElement: String) -> Int {
         if yin {
             switch pointElement {
