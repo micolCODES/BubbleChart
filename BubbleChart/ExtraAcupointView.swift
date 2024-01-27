@@ -16,8 +16,10 @@ struct ExtraAcupointView: View {
     var body: some View {  
         ZStack {
             let acupointInfo = point
-            let specieOfImages = specie.specie ? "horse" : "smallanimals"
-            let pointName = "\(specieOfImages)-\(acupointInfo.id)"
+            let specieOfImages = specie.specie ? "equine" : "smallanimals"
+            //let pointName = "\(specieOfImages)-\(acupointInfo.id)"
+            
+            let pointName = "acupoints/\(specieOfImages)-\(acupointInfo.id)"
             
             Color(ElementColor.offWhite)
                 .ignoresSafeArea()
@@ -29,9 +31,10 @@ struct ExtraAcupointView: View {
                         VStack {
                             ScrollView(.horizontal){
                                 HStack{
-                                    Image("test")
+                                    Image(pointName)
                                         .resizable()
                                         .scaledToFit()
+                                        .frame(width: geometry.size.width)
                                 }
                             }
                         }
@@ -42,7 +45,6 @@ struct ExtraAcupointView: View {
                         Text("Target: \(acupointInfo.target)")
                         Text("Description: \(acupointInfo.description)")
                         Text("Image name: \(pointName)")
-                        Text("Long Text: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.")
                     }
                     .padding(.horizontal)
                     }
