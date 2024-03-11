@@ -38,7 +38,7 @@ Example of a TCM Bubble Chart
    - To implement this, I will make a 3x3 grid, number it 1->9 and assign each acupoint a number based on its location on the image
    - Most user will be utilizing the app one handed, so pinching in and out is not an option
 2. Acupunture point descriptions need to be written from scratch. Currently used acupoint descriptions tend to be wordy and mention anatomical structures are one seldom uses out of the classroom
-3. 3 iPad support: although most equine practitioners don't use iPads in the field, many clinics have iPad for reference material, so this would support an increased usage of the app
+3. iPad support: although most equine practitioners don't use iPads in the field, many clinics have iPad for reference material, so this would support an increased usage of the app
 4. Add Back-Shu, Mu-alarming, Luo-connecting, and Xi-cleft points to each element's circle
 5. Add Lower He-Sea poins to the earth point of Large instestine, Triple Heater and Small Intestine
 6. Add Eight confluent points
